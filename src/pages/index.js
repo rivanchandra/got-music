@@ -12,6 +12,9 @@ export default function Home() {
       <Fab sx={{ position: 'fixed', bottom: '50px', left: '50%', transform: 'translateX(-50%)' }} color="primary" aria-label="add">
         <AddIcon />
       </Fab>
+      <Fab sx={{ position: 'fixed', bottom: '50px', left: '45%', transform: 'translateX(-50%)' }} color="primary" aria-label="add">
+        <AddIcon />
+      </Fab>
     </>
   )
 }
