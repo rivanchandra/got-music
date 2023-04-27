@@ -20,6 +20,9 @@ export default function Home() {
       <Fab sx={{ position: 'fixed', bottom: '50px', left: '55%', transform: 'translateX(-50%)' }} color="primary" aria-label="add">
         <FastForwardIcon />
       </Fab>
+      <Fab sx={{ position: 'fixed', bottom: '50px', left: '60%', transform: 'translateX(-50%)' }} color="primary" aria-label="add">
+        <FastForwardIcon />
+      </Fab>
     </>
   )
 }
