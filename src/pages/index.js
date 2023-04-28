@@ -11,16 +11,16 @@ export default function Home() {
   return (
     <>
       <BackgroundVideo video={videoUrl} />
+      <Fab sx={{ position: 'fixed', bottom: '50px', left: '46%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small">
+        <FastRewindIcon />
+      </Fab>
       <Fab sx={{ position: 'fixed', bottom: '50px', left: '50%', transform: 'translateX(-50%)' }} color="primary" aria-label="add">
         <PlayArrowIcon />
       </Fab>
-      <Fab sx={{ position: 'fixed', bottom: '50px', left: '45%', transform: 'translateX(-50%)' }} color="primary" aria-label="add">
-        <FastRewindIcon />
-      </Fab>
-      <Fab sx={{ position: 'fixed', bottom: '50px', left: '55%', transform: 'translateX(-50%)' }} color="primary" aria-label="add">
+      <Fab sx={{ position: 'fixed', bottom: '50px', left: '54%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small">
         <FastForwardIcon />
       </Fab>
-      <Fab sx={{ position: 'fixed', bottom: '50px', left: '60%', transform: 'translateX(-50%)' }} color="primary" aria-label="add">
+      <Fab sx={{ position: 'fixed', bottom: '50px', left: '57%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small">
         <FastForwardIcon />
       </Fab>
     </>
