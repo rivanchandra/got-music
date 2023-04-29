@@ -11,6 +11,9 @@ export default function Home() {
   return (
     <>
       <BackgroundVideo video={videoUrl} />
+      <Fab sx={{ position: 'fixed', bottom: '50px', left: '43%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small">
+        <FastForwardIcon />
+      </Fab>
       <Fab sx={{ position: 'fixed', bottom: '50px', left: '46%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small">
         <FastRewindIcon />
       </Fab>
