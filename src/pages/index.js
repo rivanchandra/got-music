@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
 import BackgroundVideo from './BackgroundVideo';
 import Fab from '@mui/material/Fab';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
@@ -11,6 +12,7 @@ import FileCopyIcon from '@mui/icons-material/FileCopyOutlined';
 import SaveIcon from '@mui/icons-material/Save';
 import PrintIcon from '@mui/icons-material/Print';
 import ShareIcon from '@mui/icons-material/Share';
+const ReactPlayer = dynamic(() => import("react-player/youtube"), { ssr: false });
 
 const actions = [
   { icon: <FileCopyIcon />, name: 'Copy' },
@@ -40,6 +42,7 @@ export default function Home() {
       <Fab sx={{ position: 'fixed', bottom: '50px', left: '57%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small">
         <FastForwardIcon />
       </Fab>
+      <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' className="youtube" />
       <SpeedDial
         ariaLabel="SpeedDial basic example"
         sx={{ position: 'absolute', bottom: 16, right: 16 }}
