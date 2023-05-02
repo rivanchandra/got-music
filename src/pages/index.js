@@ -12,7 +12,7 @@ import FileCopyIcon from '@mui/icons-material/FileCopyOutlined';
 import SaveIcon from '@mui/icons-material/Save';
 import PrintIcon from '@mui/icons-material/Print';
 import ShareIcon from '@mui/icons-material/Share';
-import Script from 'next/script';
+import Image from 'next/image';
 const ReactPlayer = dynamic(() => import("react-player/youtube"), { ssr: false });
 
 const actions = [
@@ -24,18 +24,41 @@ const actions = [
 
 export default function Home() {
   const [videoUrl, setVideoUrl] = useState('/videos/1-day.mp4');
+  const [livestream, playLiveStream] = useState(false);
+
+  const start = () => {
+    playLiveStream(false)
+    playLiveStream(true)
+  }
+
+  const pause = () => {
+    playLiveStream(false)
+  }
 
   return (
     <>
-      <Script src="materials/snow.js" />
-      {/* <BackgroundVideo video={videoUrl} /> */}
+      <Image
+        src="/images/targarean.jpg"
+        alt="My Image"
+        width="5000"
+        height="5000"
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          zIndex: -1,
+        }}
+      />
       <Fab sx={{ position: 'fixed', bottom: '50px', left: '43%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small">
         <FastForwardIcon />
       </Fab>
       <Fab sx={{ position: 'fixed', bottom: '50px', left: '46%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small">
         <FastRewindIcon />
       </Fab>
-      <Fab sx={{ position: 'fixed', bottom: '50px', left: '50%', transform: 'translateX(-50%)' }} color="primary" aria-label="add">
+      <Fab sx={{ position: 'fixed', bottom: '50px', left: '50%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" onClick={start}>
         <PlayArrowIcon />
       </Fab>
       <Fab sx={{ position: 'fixed', bottom: '50px', left: '54%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small">
@@ -44,7 +67,11 @@ export default function Home() {
       <Fab sx={{ position: 'fixed', bottom: '50px', left: '57%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small">
         <FastForwardIcon />
       </Fab>
-      <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' className="youtube" />
+      <ReactPlayer 
+        url='https://youtu.be/Ov5ljc44Ajs?list=PLsNZSmkIbJbiGQNVSqa9xYFSXpBAhyQpL' 
+        className="youtube" 
+        playing={livestream}
+      />
       <SpeedDial
         ariaLabel="SpeedDial basic example"
         sx={{ position: 'absolute', bottom: 16, right: 16 }}
