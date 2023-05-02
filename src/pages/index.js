@@ -12,6 +12,7 @@ import FileCopyIcon from '@mui/icons-material/FileCopyOutlined';
 import SaveIcon from '@mui/icons-material/Save';
 import PrintIcon from '@mui/icons-material/Print';
 import ShareIcon from '@mui/icons-material/Share';
+import Script from 'next/script';
 const ReactPlayer = dynamic(() => import("react-player/youtube"), { ssr: false });
 
 const actions = [
@@ -26,7 +27,8 @@ export default function Home() {
 
   return (
     <>
-      <BackgroundVideo video={videoUrl} />
+      <Script src="materials/snow.js" />
+      {/* <BackgroundVideo video={videoUrl} /> */}
       <Fab sx={{ position: 'fixed', bottom: '50px', left: '43%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small">
         <FastForwardIcon />
       </Fab>
