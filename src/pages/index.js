@@ -27,12 +27,8 @@ export default function Home() {
   const [livestream, playLiveStream] = useState(false);
 
   const start = () => {
-    playLiveStream(false)
-    playLiveStream(true)
-  }
-
-  const pause = () => {
-    playLiveStream(false)
+    const start = livestream?false:true;
+    playLiveStream(start);
   }
 
   return (
@@ -67,9 +63,9 @@ export default function Home() {
       <Fab sx={{ position: 'fixed', bottom: '50px', left: '57%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small">
         <FastForwardIcon />
       </Fab>
-      <ReactPlayer 
-        url='https://youtu.be/Ov5ljc44Ajs?list=PLsNZSmkIbJbiGQNVSqa9xYFSXpBAhyQpL' 
-        className="youtube" 
+      <ReactPlayer
+        url='https://youtu.be/Ov5ljc44Ajs?list=PLsNZSmkIbJbiGQNVSqa9xYFSXpBAhyQpL'
+        className="youtube"
         playing={livestream}
       />
       <SpeedDial
