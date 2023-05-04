@@ -13,6 +13,7 @@ import SaveIcon from '@mui/icons-material/Save';
 import PrintIcon from '@mui/icons-material/Print';
 import ShareIcon from '@mui/icons-material/Share';
 import Image from 'next/image';
+import Slider from '@mui/material/Slider';
 const ReactPlayer = dynamic(() => import("react-player/youtube"), { ssr: false });
 
 const actions = [
@@ -63,6 +64,7 @@ export default function Home() {
       <Fab sx={{ position: 'fixed', bottom: '50px', left: '57%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small">
         <FastForwardIcon />
       </Fab>
+      <Slider disabled defaultValue={30} aria-label="Disabled slider" />
       <ReactPlayer
         url='https://youtu.be/Ov5ljc44Ajs?list=PLsNZSmkIbJbiGQNVSqa9xYFSXpBAhyQpL'
         className="youtube"
