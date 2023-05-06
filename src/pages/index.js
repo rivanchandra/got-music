@@ -23,100 +23,109 @@ const actions = [
   { icon: <ShareIcon />, name: 'Share' },
 ];
 
+let count = 0;
+
 const musicList = [
   {
     name: 'Main Title',
-    url: 'https://youtu.be/Ov5ljc44Ajs?list=PLsNZSmkIbJbiGQNVSqa9xYFSXpBAhyQpL'
+    url: 'https://youtu.be/Ov5ljc44Ajs'
   },
   {
     name: 'North Of The Wall',
-    url: 'https://youtu.be/LXK2ZiIRfXc?list=PLsNZSmkIbJbiGQNVSqa9xYFSXpBAhyQpL'
+    url: 'https://youtu.be/LXK2ZiIRfXc'
   },
   {
     name: 'Goodbye Brother',
-    url: 'https://youtu.be/spQljapBR7s?list=PLsNZSmkIbJbiGQNVSqa9xYFSXpBAhyQpL'
+    url: 'https://youtu.be/spQljapBR7s'
   },
   {
     name: 'The Kingsroad',
-    url: 'https://youtu.be/60OCZAHSxDk?list=PLsNZSmkIbJbiGQNVSqa9xYFSXpBAhyQpL'
+    url: 'https://youtu.be/60OCZAHSxDk'
   },
   {
     name: 'The Kings Arrival',
-    url: 'https://youtu.be/PwsUAxu6rjg?list=PLsNZSmkIbJbiGQNVSqa9xYFSXpBAhyQpL'
+    url: 'https://youtu.be/PwsUAxu6rjg'
   },
   {
     name: 'Love In The Eyes',
-    url: 'https://youtu.be/SFbp8GzZ-ec?list=PLsNZSmkIbJbiGQNVSqa9xYFSXpBAhyQpL'
+    url: 'https://youtu.be/SFbp8GzZ-ec'
   },
   {
     name: 'A Raven From Kings Landing',
-    url: 'https://youtu.be/AXb5wyNf6Jw?list=PLsNZSmkIbJbiGQNVSqa9xYFSXpBAhyQpL'
+    url: 'https://youtu.be/AXb5wyNf6Jw'
   },
   {
     name: 'The Wall',
-    url: 'https://youtu.be/eRgxqnP0qw4?list=PLsNZSmkIbJbiGQNVSqa9xYFSXpBAhyQpL'
+    url: 'https://youtu.be/eRgxqnP0qw4'
   },
   {
     name: 'Things I Do For Love',
-    url: 'https://youtu.be/JZyLqrVfslQ?list=PLsNZSmkIbJbiGQNVSqa9xYFSXpBAhyQpL'
+    url: 'https://youtu.be/JZyLqrVfslQ'
   },
   {
     name: 'A Golden Crown',
-    url: 'https://youtu.be/hX509eFmZfg?list=PLsNZSmkIbJbiGQNVSqa9xYFSXpBAhyQpL'
+    url: 'https://youtu.be/hX509eFmZfg'
   },
   {
     name: 'Winter Is Coming',
-    url: 'https://youtu.be/jHWk1bFwqYE?list=PLsNZSmkIbJbiGQNVSqa9xYFSXpBAhyQpL'
+    url: 'https://youtu.be/jHWk1bFwqYE'
   },
   {
     name: 'A Bird Without Feathers',
-    url: 'https://youtu.be/1Lc1skF69lU?list=PLsNZSmkIbJbiGQNVSqa9xYFSXpBAhyQpL'
+    url: 'https://youtu.be/1Lc1skF69lU'
   },
   {
     name: 'Await The Kings Justice',
-    url: 'https://youtu.be/fON6yJyM1bw?list=PLsNZSmkIbJbiGQNVSqa9xYFSXpBAhyQpL'
+    url: 'https://youtu.be/fON6yJyM1bw'
   },
   {
     name: 'Youll Be Queen One Day',
-    url: 'https://youtu.be/UaPGoXe3VLo?list=PLsNZSmkIbJbiGQNVSqa9xYFSXpBAhyQpL'
+    url: 'https://youtu.be/UaPGoXe3VLo'
   },
   {
     name: 'The Assassins Dagger',
-    url: 'https://youtu.be/bCuuWufKPPk?list=PLsNZSmkIbJbiGQNVSqa9xYFSXpBAhyQpL'
+    url: 'https://youtu.be/bCuuWufKPPk'
   },
   {
     name: 'Jons Honor',
-    url: 'https://youtu.be/HFIWi-KoozE?list=PLsNZSmkIbJbiGQNVSqa9xYFSXpBAhyQpL'
+    url: 'https://youtu.be/HFIWi-KoozE'
   },
   {
     name: 'To Vaes Dothrak',
-    url: 'https://youtu.be/MrnMIIMRC0g?list=PLsNZSmkIbJbiGQNVSqa9xYFSXpBAhyQpL'
+    url: 'https://youtu.be/MrnMIIMRC0g'
   },
   {
     name: 'Black Of Hair',
-    url: 'https://youtu.be/DksmuiccR-0?list=PLsNZSmkIbJbiGQNVSqa9xYFSXpBAhyQpL'
+    url: 'https://youtu.be/DksmuiccR-0'
   },
   {
     name: 'You Win Or You Die',
-    url: 'https://youtu.be/S0LG82B1bVc?list=PLsNZSmkIbJbiGQNVSqa9xYFSXpBAhyQpL'
+    url: 'https://youtu.be/S0LG82B1bVc'
   },
   {
     name: 'Small Pack Of Wolves',
-    url: 'https://youtu.be/avNYe_941so?list=PLsNZSmkIbJbiGQNVSqa9xYFSXpBAhyQpL'
+    url: 'https://youtu.be/avNYe_941so'
   },
   {
     name: 'Game Of Thrones',
-    url: 'https://youtu.be/9VgoADESpw0?list=PLsNZSmkIbJbiGQNVSqa9xYFSXpBAhyQpL'
+    url: 'https://youtu.be/9VgoADESpw0'
   }
 ]
 
 export default function Home() {
   const [videoUrl, setVideoUrl] = useState('/videos/1-day.mp4');
   const [livestream, playLiveStream] = useState(false);
+  const [currentLive, setCurrentLive] = useState(musicList[count].url);
 
   const start = () => {
     const start = livestream?false:true;
     playLiveStream(start);
+  }
+
+  const move = (cond) => {
+    cond == 'next'?count = count===musicList.length-1?0:count+1:count = count===musicList.length-1?0:count-1;
+    
+    setCurrentLive(musicList[count].url);
   }
 
   return (
@@ -136,24 +145,37 @@ export default function Home() {
           zIndex: -1,
         }}
       />
-      <Fab sx={{ position: 'fixed', bottom: '50px', left: '43%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small">
+      <Fab sx={{ position: 'fixed', bottom: '50px', left: '3%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small">
         <FastForwardIcon />
       </Fab>
-      <Fab sx={{ position: 'fixed', bottom: '50px', left: '46%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small">
+      <Fab 
+        sx={{ position: 'fixed', bottom: '50px', left: '6%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
+        onClick={()=> move('prev')}
+      >
         <FastRewindIcon />
       </Fab>
-      <Fab sx={{ position: 'fixed', bottom: '50px', left: '50%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" onClick={start}>
+      <Fab 
+        sx={{ position: 'fixed', bottom: '50px', left: '10%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" 
+        onClick={start}
+      >
         <PlayArrowIcon />
       </Fab>
-      <Fab sx={{ position: 'fixed', bottom: '50px', left: '54%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small">
+      <Fab 
+        sx={{ position: 'fixed', bottom: '50px', left: '14%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
+        onClick={()=> move('next')}
+      >
         <FastForwardIcon />
       </Fab>
-      <Fab sx={{ position: 'fixed', bottom: '50px', left: '57%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small">
+      <Fab sx={{ position: 'fixed', bottom: '50px', left: '17%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small">
         <FastForwardIcon />
       </Fab>
-      <Slider disabled defaultValue={30} aria-label="Disabled slider" />
+      <Slider 
+        sx={{ width: 200, position: 'fixed', bottom: '50px', left: '26%', transform: 'translateX(-50%)' }} 
+        defaultValue={30} 
+        aria-label="Disabled slider" 
+      />
       <ReactPlayer
-        url='https://youtu.be/Ov5ljc44Ajs?list=PLsNZSmkIbJbiGQNVSqa9xYFSXpBAhyQpL'
+        url={currentLive}
         className="youtube"
         playing={livestream}
       />
