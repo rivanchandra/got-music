@@ -13,7 +13,14 @@ import SaveIcon from '@mui/icons-material/Save';
 import PrintIcon from '@mui/icons-material/Print';
 import ShareIcon from '@mui/icons-material/Share';
 import Image from 'next/image';
+import Stack from '@mui/material/Stack';
 import Slider from '@mui/material/Slider';
+import PauseIcon from '@mui/icons-material/Pause';
+import ShuffleIcon from '@mui/icons-material/Shuffle';
+import screenfull from 'screenfull';
+import FullscreenIcon from '@mui/icons-material/Fullscreen';
+import FullscreenExitIcon from '@mui/icons-material/FullscreenExit';
+import Typography from '@mui/material/Typography';
 const ReactPlayer = dynamic(() => import("react-player/youtube"), { ssr: false });
 
 const actions = [
@@ -109,6 +116,106 @@ const musicList = [
   {
     name: 'Game Of Thrones',
     url: 'https://youtu.be/9VgoADESpw0'
+  },
+  {
+    name: 'Kill Them All',
+    url: 'https://youtu.be/CWm1jRbMB0M'
+  },
+  {
+    name: 'The Pointy End',
+    url: 'https://youtu.be/ulriP5SBStY'
+  },
+  {
+    name: 'Victory Does Not Make Us Conquerors',
+    url: 'https://youtu.be/wbSYRVese6Q'
+  },
+  {
+    name: 'When The Sun Rises In The West',
+    url: 'https://youtu.be/Rl3HQsJjsHI'
+  },
+  {
+    name: 'King Of The North',
+    url: 'https://youtu.be/t4U66h3robc'
+  },
+  {
+    name: 'The Nights Watch',
+    url: 'https://youtu.be/KU6G0rvLydc'
+  },
+  {
+    name: 'Fire And Blood',
+    url: 'https://youtu.be/RxBgXtwBHrE'
+  },
+  {
+    name: 'Finale',
+    url: 'https://youtu.be/jh_d5fvO0NU'
+  },
+  {
+    name: 'A Lannister Always Pays His Debts',
+    url: 'https://youtu.be/5qNtmne62Vo'
+  },
+  {
+    name: 'Dracarys',
+    url: 'https://youtu.be/jIsla-hNxf0'
+  },
+  {
+    name: 'I Paid the Iron Price',
+    url: 'https://youtu.be/D0-ptcQc1I8'
+  },
+  {
+    name: 'Chaos Is a Ladder',
+    url: 'https://youtu.be/sTe_hPK2RHY'
+  },
+  {
+    name: 'Dark Wings, Dark Words',
+    url: 'https://youtu.be/fywMObuBTrI'
+  },
+  {
+    name: 'You Know Nothing',
+    url: 'https://youtu.be/yd8IMTzc2bI'
+  },
+  {
+    name: 'Wall Of Ice',
+    url: 'https://youtu.be/XrAUlIdmcZ8'
+  },
+  {
+    name: 'Kingslayer',
+    url: 'https://youtu.be/HzkvWIsafNo'
+  },
+  {
+    name: 'I Have to Go North',
+    url: 'https://youtu.be/ps_6VVtPDQU'
+  },
+  {
+    name: 'White Walkers',
+    url: 'https://youtu.be/AsKQF20vUEo'
+  },
+  {
+    name: 'Its Always Summer Under the Sea',
+    url: 'https://youtu.be/aqhqXPlZPkY'
+  },
+  {
+    name: 'Reek',
+    url: 'https://youtu.be/9miyyd9_bUE'
+  },
+  {
+    name: 'The Night Is Dark',
+    url: 'https://youtu.be/snP0o-jUs4g'
+  },
+  {
+    name: 'The Lannisters Send Their Regards',
+    url: 'https://youtu.be/H4purJGrRfg'
+  },
+  {
+    name: 'Heir to Winterfell',
+    url: 'https://youtu.be/eXbWn_VyPPU'
+  },
+  {
+    name: 'Mhysa',
+    url: 'https://youtu.be/ggS5zjraJi4'
+  },
+  {
+    name: 'For the Realm',
+    url: 'https://youtu.be/0_yQa83T8Qg'
   }
 ]
 
@@ -116,6 +223,8 @@ export default function Home() {
   const [videoUrl, setVideoUrl] = useState('/videos/1-day.mp4');
   const [livestream, playLiveStream] = useState(false);
   const [currentLive, setCurrentLive] = useState(musicList[count].url);
+  const [volume, setVolume] = useState(100);
+  const [fullscreenIcon, setFullscreenIcon] = useState(true);
 
   const start = () => {
     const start = livestream?false:true;
@@ -131,12 +240,28 @@ export default function Home() {
   const suffleMusic = () => {
     let tempData = musicList;
     let result = shuffle(tempData.length);
-    setCurrentLive(musicList[count].url);
+    setCurrentLive(musicList[result].url);
     count = tempData.indexOf(tempData[result])
   }
 
   function shuffle(max) {
     return Math.floor(Math.random() * max);
+  }
+
+  const handleChange = (event, newValue) => {
+    setVolume(newValue);
+  };
+
+  const handleClickFullscreen = () => {
+    if(screenfull.isFullscreen)
+    {
+      screenfull.exit();
+      setFullscreenIcon(screenfull.isFullscreen);
+      return;
+    }
+
+    screenfull.request();
+    setFullscreenIcon(screenfull.isFullscreen);
   }
 
   return (
@@ -156,39 +281,59 @@ export default function Home() {
           zIndex: -1,
         }}
       />
-      <Fab sx={{ position: 'fixed', bottom: '50px', left: '3%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small">
-        <FastForwardIcon />
-      </Fab>
-      <Fab 
-        sx={{ position: 'fixed', bottom: '50px', left: '6%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
+      <Typography 
+        sx={{ position: 'fixed', bottom: '150px', left: '1%' }}
+        variant="h2"
+        gutterBottom
+      >
+        {count} {musicList[count].name}
+      </Typography>
+      <Fab
+        variant="outlined" 
+        sx={{ position: 'fixed', bottom: '30px', left: '3%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
         onClick={()=> move('prev')}
       >
         <FastRewindIcon />
       </Fab>
       <Fab 
-        sx={{ position: 'fixed', bottom: '50px', left: '10%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" 
+        sx={{ position: 'fixed', bottom: '30px', left: '7%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" 
         onClick={start}
       >
-        <PlayArrowIcon />
+        {livestream?<PauseIcon />:<PlayArrowIcon />}
       </Fab>
       <Fab 
-        sx={{ position: 'fixed', bottom: '50px', left: '14%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
+        sx={{ position: 'fixed', bottom: '30px', left: '11%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
         onClick={()=> move('next')}
       >
         <FastForwardIcon />
       </Fab>
-      <Fab sx={{ position: 'fixed', bottom: '50px', left: '17%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small">
-        <FastForwardIcon />
-      </Fab>
       <Slider 
-        sx={{ width: 200, position: 'fixed', bottom: '50px', left: '26%', transform: 'translateX(-50%)' }} 
-        defaultValue={30} 
-        aria-label="Disabled slider" 
+        sx={{ height:100, position: 'fixed', bottom: '30px', left: '14%', transform: 'translateX(-50%)' }}
+        orientation="vertical"
+        aria-label="Volume" 
+        value={volume}
+        min={0}
+        max={1}
+        step={0.01}
+        onChange={handleChange} 
       />
+      <Fab 
+        sx={{ position: 'fixed', bottom: '30px', left: '17%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
+        onClick={() => suffleMusic()}
+      >
+        <ShuffleIcon />
+      </Fab>
+      <Fab 
+        sx={{ position: 'fixed', bottom: '30px', left: '20%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
+        onClick={() => handleClickFullscreen()}
+      >
+        {fullscreenIcon?<FullscreenIcon />:<FullscreenExitIcon />}
+      </Fab>
       <ReactPlayer
         url={currentLive}
         className="youtube"
         playing={livestream}
+        volume={volume}
       />
       <SpeedDial
         ariaLabel="SpeedDial basic example"

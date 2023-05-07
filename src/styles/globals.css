@@ -1,5 +1,9 @@
 .youtube {
-    position: absolute;
-    top: -1000px;
-    left: -1000px;
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+}
+
+.MuiTypography-root {
+  color: #d3d3d3;
 }
