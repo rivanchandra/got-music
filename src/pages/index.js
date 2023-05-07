@@ -128,6 +128,17 @@ export default function Home() {
     setCurrentLive(musicList[count].url);
   }
 
+  const suffleMusic = () => {
+    let tempData = musicList;
+    let result = shuffle(tempData.length);
+    setCurrentLive(musicList[count].url);
+    count = tempData.indexOf(tempData[result])
+  }
+
+  function shuffle(max) {
+    return Math.floor(Math.random() * max);
+  }
+
   return (
     <>
       <Image
