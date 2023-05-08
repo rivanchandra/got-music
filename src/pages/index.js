@@ -13,7 +13,6 @@ import SaveIcon from '@mui/icons-material/Save';
 import PrintIcon from '@mui/icons-material/Print';
 import ShareIcon from '@mui/icons-material/Share';
 import Image from 'next/image';
-import Stack from '@mui/material/Stack';
 import Slider from '@mui/material/Slider';
 import PauseIcon from '@mui/icons-material/Pause';
 import ShuffleIcon from '@mui/icons-material/Shuffle';
@@ -232,7 +231,7 @@ export default function Home() {
   }
 
   const move = (cond) => {
-    cond == 'next'?count = count===musicList.length-1?0:count+1:count = count===musicList.length-1?0:count-1;
+    cond == 'next'?count = count===musicList.length-1?0:count+1:count = count===0?musicList.length-1:count-1;
     
     setCurrentLive(musicList[count].url);
   }
@@ -282,8 +281,9 @@ export default function Home() {
         }}
       />
       <Typography 
+        style={{ fontFamily: 'MyCustomFont' }}
         sx={{ position: 'fixed', bottom: '150px', left: '1%' }}
-        variant="h2"
+        variant="h5"
         gutterBottom
       >
         {count} {musicList[count].name}
@@ -334,6 +334,7 @@ export default function Home() {
         className="youtube"
         playing={livestream}
         volume={volume}
+        onEnded={()=> move('next')}
       />
       <SpeedDial
         ariaLabel="SpeedDial basic example"

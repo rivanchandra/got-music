@@ -7,3 +7,8 @@
 .MuiTypography-root {
   color: #d3d3d3;
 }
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('/Game of Thrones.ttf') format('truetype');
+}
