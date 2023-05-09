@@ -20,6 +20,7 @@ import screenfull from 'screenfull';
 import FullscreenIcon from '@mui/icons-material/Fullscreen';
 import FullscreenExitIcon from '@mui/icons-material/FullscreenExit';
 import Typography from '@mui/material/Typography';
+import Drawer from '@mui/material/Drawer';
 const ReactPlayer = dynamic(() => import("react-player/youtube"), { ssr: false });
 
 const actions = [
@@ -224,6 +225,7 @@ export default function Home() {
   const [currentLive, setCurrentLive] = useState(musicList[count].url);
   const [volume, setVolume] = useState(100);
   const [fullscreenIcon, setFullscreenIcon] = useState(true);
+  const [drawer, setDrawer] = useState(false);
 
   const start = () => {
     const start = livestream?false:true;
@@ -262,6 +264,14 @@ export default function Home() {
     screenfull.request();
     setFullscreenIcon(screenfull.isFullscreen);
   }
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
 
   return (
     <>
@@ -329,6 +339,19 @@ export default function Home() {
       >
         {fullscreenIcon?<FullscreenIcon />:<FullscreenExitIcon />}
       </Fab>
+      <Fab 
+        sx={{ position: 'fixed', bottom: '30px', left: '23%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
+        onClick={()=>setDrawer(true)}
+      >
+        {fullscreenIcon?<FullscreenIcon />:<FullscreenExitIcon />}
+      </Fab>
+      <Drawer
+        anchor="right"
+        open={drawer}
+        onClose={()=>setDrawer(false)}
+      >
+        <p>test</p>
+      </Drawer>
       <ReactPlayer
         url={currentLive}
         className="youtube"
