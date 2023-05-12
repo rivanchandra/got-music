@@ -350,7 +350,7 @@ export default function Home() {
         open={drawer}
         onClose={()=>setDrawer(false)}
       >
-        <p>test2</p>
+        <p>test3</p>
       </Drawer>
       <ReactPlayer
         url={currentLive}
