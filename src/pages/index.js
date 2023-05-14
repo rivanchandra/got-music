@@ -50,7 +50,7 @@ const musicList = [
     url: 'https://youtu.be/spQljapBR7s'
   },
   {
-    name: 'The Kings Arrival',
+    name: 'The King`s Arrival',
     url: 'https://youtu.be/PwsUAxu6rjg'
   },
   {
@@ -86,11 +86,11 @@ const musicList = [
     url: 'https://youtu.be/60OCZAHSxDk'
   },
   {
-    name: 'The Assassins Dagger',
+    name: 'The Assassin`s Dagger',
     url: 'https://youtu.be/bCuuWufKPPk'
   },
   {
-    name: 'Await The Kings Justice',
+    name: 'Await The King`s Justice',
     url: 'https://youtu.be/fON6yJyM1bw'
   },
   {
@@ -206,7 +206,7 @@ const musicList = [
     url: 'https://youtu.be/PhqYJY6jRjo'
   },
   {
-    name: 'Dont Die With A Clean Sword',
+    name: 'Don`t Die With A Clean Sword',
     url: 'https://youtu.be/47rojSGiUlk'
   },
   {
@@ -306,7 +306,7 @@ const musicList = [
     url: 'https://youtu.be/5qNtmne62Vo'
   },
   {
-    name: 'The Lannisters Send Their Regards',
+    name: 'The Lannister`s Send Their Regards',
     url: 'https://youtu.be/H4purJGrRfg'
   },
   {
@@ -354,7 +354,7 @@ const musicList = [
     url: 'https://youtu.be/AZkXeTQ3n4A'
   },
   {
-    name: 'Im Sorry for Today',
+    name: 'I`m Sorry for Today',
     url: 'https://youtu.be/aKDm3jHbMrk'
   },
   {
@@ -472,6 +472,282 @@ const musicList = [
   {
     name: 'My Watch Has Ended',
     url: 'https://youtu.be/qhEQFFNfl3k'
+  },
+  {
+    name: 'The Red Woman',
+    url: 'https://youtu.be/44mxIJOO-ZQ'
+  },
+  {
+    name: 'Lord of Light',
+    url: 'https://youtu.be/7X94zJaUEb4'
+  },
+  {
+    name: 'I Choose Violence',
+    url: 'https://youtu.be/Rgh7CftYXkY'
+  },
+  {
+    name: 'Needle',
+    url: 'https://youtu.be/W2XCXFWpI0s'
+  },
+  {
+    name: 'Khaleesi',
+    url: 'https://youtu.be/lDxSYGczfSw'
+  },
+  {
+    name: 'Coronation',
+    url: 'https://youtu.be/R-W2aYdv1Sc'
+  },
+  {
+    name: 'Hold the Door',
+    url: 'https://youtu.be/GFgwGctudfM'
+  },
+  {
+    name: 'Hodor',
+    url: 'https://youtu.be/ftPy8ZOhL_s'
+  },
+  {
+    name: 'Service of the Gods',
+    url: 'https://youtu.be/xPUKrkgA1Vo'
+  },
+  {
+    name: 'Blood of My Blood',
+    url: 'https://youtu.be/MCC2CNS5lRQ'
+  },
+  {
+    name: 'Maester',
+    url: 'https://youtu.be/uLy1w-msTo0'
+  },
+  {
+    name: 'Reign',
+    url: 'https://youtu.be/sSvWOba4H1I'
+  },
+  {
+    name: 'Bastard',
+    url: 'https://youtu.be/tC5RQVqvPzM'
+  },
+  {
+    name: 'Trust Each Other',
+    url: 'https://youtu.be/4o3hsWztDcM'
+  },
+  {
+    name: 'Light of the Seven',
+    url: 'https://youtu.be/QJHPlKPOc78'
+  },
+  {
+    name: 'The Tower',
+    url: 'https://youtu.be/N4MsUDM2iYs'
+  },
+  {
+    name: 'Winter Has Come',
+    url: 'https://youtu.be/-6u9WsIhZVM'
+  },
+  {
+    name: 'Hear Me Roar',
+    url: 'https://youtu.be/ej7dg3zrxMs'
+  },
+  {
+    name: 'The Winds of Winter',
+    url: 'https://youtu.be/sVFsTELFW8o'
+  },
+  {
+    name: 'Dragonstone',
+    url: 'https://youtu.be/sOcBCtPB7Xo'
+  },
+  {
+    name: 'Shall We Begin?',
+    url: 'https://youtu.be/rct1x6VjEZ4'
+  },
+  {
+    name: 'Home',
+    url: 'https://youtu.be/vMENPd4Jro8'
+  },
+  {
+    name: 'I Am the Storm',
+    url: 'https://youtu.be/8OcW_lmYaF0'
+  },
+  {
+    name: 'Ironborn',
+    url: 'https://youtu.be/5NYcgqxcb44'
+  },
+  {
+    name: 'The Gift',
+    url: 'https://youtu.be/JmbuFCf4ew8'
+  },
+  {
+    name: 'The Long Farewell',
+    url: 'https://youtu.be/MFnvMnkf4Z0'
+  },
+  {
+    name: 'A Lion`s Legacy',
+    url: 'https://youtu.be/MoEdMDCDtc0'
+  },
+  {
+    name: 'Message for Cersei',
+    url: 'https://youtu.be/_4cUN8Bw5bs'
+  },
+  {
+    name: 'The Queen`s Justice',
+    url: 'https://youtu.be/jzfJrEwYYHs'
+  },
+  {
+    name: 'Dragonglass',
+    url: 'https://youtu.be/3lFg8n6bPNY'
+  },
+  {
+    name: 'Spoils of War, Pt. 1',
+    url: 'https://youtu.be/eU_pT3SKUCc'
+  },
+  {
+    name: 'Spoils of War, Pt. 2',
+    url: 'https://youtu.be/h1aqWceMz4E'
+  },
+  {
+    name: 'Gorgeous Beasts',
+    url: 'https://youtu.be/-ittyIwOh4U'
+  },
+  {
+    name: 'Against All Odds',
+    url: 'https://youtu.be/dpBMlhldZqE'
+  },
+  {
+    name: 'See You for What You Are',
+    url: 'https://youtu.be/TuzmJDfv_IM'
+  },
+  {
+    name: 'Casterly Rock',
+    url: 'https://youtu.be/iKGBtse_SFU'
+  },
+  {
+    name: 'A Game I Like to Play',
+    url: 'https://youtu.be/96zjIiziQ5o'
+  },
+  {
+    name: 'The Dagger',
+    url: 'https://youtu.be/tNzznQPNW2k'
+  },
+  {
+    name: 'No One Walks Away from Me',
+    url: 'https://youtu.be/CNjkUduAlHI'
+  },
+  {
+    name: 'Winter Is Here',
+    url: 'https://youtu.be/bev2OqiMfYg'
+  },
+  {
+    name: 'Truth',
+    url: 'https://youtu.be/P0ohJJVZlwM'
+  },
+  {
+    name: 'The Army of the Dead',
+    url: 'https://youtu.be/7RjRB35Gu0M'
+  },
+  {
+    name: 'Arrival at Winterfell',
+    url: 'https://youtu.be/EPnZ6yOECCI'
+  },
+  {
+    name: 'Flight of Dragons',
+    url: 'https://youtu.be/eRWR_k3rw1I'
+  },
+  {
+    name: 'Heir to the Throne',
+    url: 'https://youtu.be/D5UE0pcI7aY'
+  },
+  {
+    name: 'Jenny of Oldstones',
+    url: 'https://youtu.be/v0U3XePR8ls'
+  },
+  {
+    name: 'A Knight of the Seven Kingdoms',
+    url: 'https://youtu.be/hKqcYIj8nvo'
+  },
+  {
+    name: 'The Battle of Winterfell',
+    url: 'https://youtu.be/2lpojrxaxE4'
+  },
+  {
+    name: 'The Dead are Already Here',
+    url: 'https://youtu.be/QOO6wJy1Ivo'
+  },
+  {
+    name: 'The Long Night Pt. 1',
+    url: 'https://youtu.be/IrvxoaoBplM'
+  },
+  {
+    name: 'Battle for the Skies',
+    url: 'https://youtu.be/eGEk2q1ygoA'
+  },
+  {
+    name: 'The Long Night Pt. 2',
+    url: 'https://youtu.be/ZDAN70ow4bI'
+  },
+  {
+    name: 'The Night King',
+    url: 'https://youtu.be/k1frgt0D_f4'
+  },
+  {
+    name: 'Dead Before the Dawn',
+    url: 'https://youtu.be/p79GqP9Tl-0'
+  },
+  {
+    name: 'Not Today',
+    url: 'https://youtu.be/ZgxMjiXAZ0o'
+  },
+  {
+    name: 'Farewell',
+    url: 'https://youtu.be/OHB0g3u7M3M'
+  },
+  {
+    name: 'For Cersei',
+    url: 'https://youtu.be/KbW6iGj3xKU'
+  },
+  {
+    name: 'The Last War',
+    url: 'https://youtu.be/rGAtSDGzze8'
+  },
+  {
+    name: 'The Bells',
+    url: 'https://youtu.be/SIuJr5kuesk'
+  },
+  {
+    name: 'Nothing Else Matters',
+    url: 'https://youtu.be/2_0CwPFm0-M'
+  },
+  {
+    name: 'Into the Fire',
+    url: 'https://youtu.be/dOtk9s_RoBs'
+  },
+  {
+    name: 'Be with Me',
+    url: 'https://youtu.be/hphmmWgEo4M'
+  },
+  {
+    name: 'Master of War',
+    url: 'https://youtu.be/rza1Qa7yCBU'
+  },
+  {
+    name: 'The Iron Throne',
+    url: 'https://youtu.be/F8Cn8shOG7I'
+  },
+  {
+    name: 'Break the Wheel',
+    url: 'https://youtu.be/jIx6XV4x2_A'
+  },
+  {
+    name: 'You Have a Choice',
+    url: 'https://youtu.be/gxJp2rxkqM8'
+  },
+  {
+    name: 'The Last of the Starks',
+    url: 'https://youtu.be/Izj3IsXi6Gs'
+  },
+  {
+    name: 'The White Book',
+    url: 'https://youtu.be/OJfy5w60YTg'
+  },
+  {
+    name: 'A Song of Ice and Fire',
+    url: 'https://youtu.be/HppOkD89ntQ'
   }
 ]
 
