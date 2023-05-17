@@ -12,18 +12,15 @@ import ListIcon from '@mui/icons-material/List';
 
 import screenfull from 'screenfull';
 
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-
 import FullscreenIcon from '@mui/icons-material/Fullscreen';
 import FullscreenExitIcon from '@mui/icons-material/FullscreenExit';
 import Typography from '@mui/material/Typography';
-import Drawer from '@mui/material/Drawer';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
 import {list} from '../resources/list.js';
 import {pictures} from '../resources/pictures.js';
+import DrawerPage from '../components/DrawerPage.js';
 
 const ReactPlayer = dynamic(() => import("react-player/youtube"), { ssr: false });
 
@@ -39,7 +36,6 @@ export default function Home() {
   const [currentPicture, setCurrentPicture] = useState(pictureList[0].path);
   const [volume, setVolume] = useState(100);
   const [fullscreenIcon, setFullscreenIcon] = useState(true);
-  const [drawer, setDrawer] = useState(false);
 
   const start = () => {
     const start = livestream?false:true;
@@ -167,34 +163,7 @@ export default function Home() {
       >
         {fullscreenIcon?<FullscreenIcon />:<FullscreenExitIcon />}
       </Fab>
-      <Fab 
-        sx={{ position: 'fixed', bottom: '30px', left: '23%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
-        onClick={()=>setDrawer(true)}
-      >
-        {fullscreenIcon?<FullscreenIcon />:<FullscreenExitIcon />}
-      </Fab>
-      <Drawer
-        anchor="right"
-        open={drawer}
-        onClose={()=>setDrawer(false)}
-      >
-        <Box component="span" sx={{ p: 2, width: [300, 500, 1000] }}>
-          <Grid container spacing={2}>
-            <Grid item xs={8}>
-            <iframe height="315" src="https://www.youtube.com/embed/bjqEWgDVPe0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </Grid>
-            <Grid item xs={4}>
-              <p>xs=6</p>
-            </Grid>
-            <Grid item xs={4}>
-              <p>xs=4</p>
-            </Grid>
-            <Grid item xs={8}>
-              <p>xs=8</p>
-            </Grid>
-          </Grid>
-        </Box>
-      </Drawer>
+      <DrawerPage />
       <ReactPlayer
         url={currentLive}
         className="youtube"
