@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Fab from '@mui/material/Fab';
-import FullscreenIcon from '@mui/icons-material/Fullscreen';
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import Drawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -14,7 +14,7 @@ export default function DrawerPage() {
           sx={{ position: 'fixed', bottom: '30px', left: '23%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
           onClick={()=>setDrawer(true)}
       >
-        <FullscreenIcon />
+        <AutoStoriesIcon />
       </Fab>
       <Drawer
         anchor="right"

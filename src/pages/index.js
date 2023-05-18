@@ -21,6 +21,7 @@ import MenuItem from '@mui/material/MenuItem';
 import {list} from '../resources/list.js';
 import {pictures} from '../resources/pictures.js';
 import DrawerPage from '../components/DrawerPage.js';
+import MapPage from '../components/MapPage.js';
 
 const ReactPlayer = dynamic(() => import("react-player/youtube"), { ssr: false });
 
@@ -164,6 +165,7 @@ export default function Home() {
         {fullscreenIcon?<FullscreenIcon />:<FullscreenExitIcon />}
       </Fab>
       <DrawerPage />
+      <MapPage />
       <ReactPlayer
         url={currentLive}
         className="youtube"
