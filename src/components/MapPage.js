@@ -21,9 +21,9 @@ export default function MapPage() {
 	const [drawer, setDrawer] = useState(false);
 	const [selectedIndex, setSelectedIndex] = useState(1);
 
-  const handleListItemClick = (event,index) => {
-    setSelectedIndex(index);
-  };
+	const handleListItemClick = (event, index) => {
+		setSelectedIndex(index);
+	};
 
 	return (
 		<>
