@@ -1,7 +1,7 @@
 export const journey = [
 	{
 		name: 'Daenerys',
-		image: '',
+		image: '/images/char/daenerys.png',
 		location: [
 			{
 				longitude: 31.11325,
@@ -43,6 +43,100 @@ export const journey = [
 				longitude: 19.07680,
 				latitude: 3.98406
 			}
+		]
+	},
+	{
+		name: 'Jon Snow',
+		image: '/images/char/jon.png',
+		location: [
+			{
+				longitude: 14.54600,
+				latitude: 26.63140
+			},
+			{
+				longitude: 18.85107,
+				latitude: 34.90808
+			},
+			{
+				longitude: 16.23750,
+				latitude: 37.21608
+			},
+			{
+				longitude: 17.62768,
+				latitude: 36.29920
+			},
+			{
+				longitude: 24.35414,
+				latitude: 7.06461
+			},
+			{
+				longitude: 12.84511,
+				latitude: 43.48677
+			},
+			{
+				longitude: 19.07291,
+				latitude: 3.97701
+			},
+		]
+	},
+	{
+		name: 'Tyrion Lannister',
+		image: '/images/char/tyrion.jpg',
+		location: [
+			{
+				longitude: 14.54950,
+				latitude: 26.63297
+			},
+			{
+				longitude: 18.85336,
+				latitude: 34.90465
+			},
+			{
+				longitude: 19.07001,
+				latitude: 3.97575
+			},
+			{
+				longitude: 31.11133,
+				latitude: 4.65167
+			},
+			{
+				longitude: 43.63915,
+				latitude: -9.21022
+			},
+			{
+				longitude: 67.12768,
+				latitude: -9.59659
+			},
+			{
+				longitude: 24.34639,
+				latitude: 7.05785
+			}
+		]
+	},
+	{
+		name: 'Arya Stark',
+		image: '/images/char/arya.jpg',
+		location: [
+			{
+				longitude: 14.55506,
+				latitude: 26.63225
+			},
+			{
+				longitude: 19.06610, 
+				latitude: 3.97758
+			},
+			{
+				longitude: 16.89317, 
+				latitude: 8.38607
+			},
+			{
+				longitude: 13.28475, 
+				latitude: 14.47938
+			},
+			{
+				longitude: 30.96151, 
+				latitude: 16.26179
+			},
 		]
 	},
 ]

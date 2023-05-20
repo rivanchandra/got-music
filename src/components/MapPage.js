@@ -21,21 +21,41 @@ const MAPBOX_TOKEN = 'pk.eyJ1Ijoicml2YW5jaGFuIiwiYSI6ImNsaHNzMXR4NjBzOTMzaG9hcDN
 
 export default function MapPage() {
 	const [drawer, setDrawer] = useState(false);
-	const [selectedIndex, setSelectedIndex] = useState(1);
-	const [selected, setSelected] = useState(0);
+	const [selectedIndex, setSelectedIndex] = useState(-1);
+	const [selected, setSelected] = useState(-1);
 
 	const handleListItemClick = (event, index) => {
 		setSelectedIndex(index);
+		setSelected(index);
 	};
 
 	const MarkerUnit = () => {
-		
 		return journey[selected].location.map((data, index) => (
 			<Marker key={index} longitude={data.longitude} latitude={data.latitude} anchor="bottom">
 				<Avatar sx={{ fontSize: 10, width: 15, height: 15, bgcolor: 'blue' }}>{index+1}</Avatar>
 			</Marker>
 		));
+	}
 
+	const ListUnit = () => {
+		return journey.map((data, index) => (
+			<>
+				<ListItemButton
+					key={`list-${index}`}
+					selected={selectedIndex === index}
+					onClick={(event) => handleListItemClick(event, index)}
+				>
+					<ListItemAvatar>
+						<Avatar
+							alt={data.name}
+							src={data.image}
+						/>
+					</ListItemAvatar>
+					<ListItemText primary={data.name} />
+				</ListItemButton>
+				<Divider component="li" />
+			</>
+		));
 	}
 
 	return (
@@ -64,36 +84,12 @@ export default function MapPage() {
 								mapStyle="mapbox://styles/rivanchan/clhsk42gv021d01qyfg3m7ygr"
 								mapboxAccessToken={MAPBOX_TOKEN}
 							>
-								<MarkerUnit />
+								{selected > -1?<MarkerUnit />:''}
 							</Map>
 						</Grid>
 						<Grid item xs={2}>
 							<List component="nav" aria-label="secondary mailbox folder">
-								<ListItemButton
-									selected={selectedIndex === 2}
-									onClick={(event) => handleListItemClick(event, 2)}
-								>
-									<ListItemAvatar>
-										<Avatar
-											alt={`daenerys`}
-											src={`/images/char/daenerys.png`}
-										/>
-									</ListItemAvatar>
-									<ListItemText primary={`Daenerys`} />
-								</ListItemButton>
-								<Divider component="li" />
-								<ListItemButton
-									selected={selectedIndex === 3}
-									onClick={(event) => handleListItemClick(event, 3)}
-								>
-									<ListItemAvatar>
-										<Avatar
-											alt={`Avatar`}
-											src={`/images/arryn.jpg`}
-										/>
-									</ListItemAvatar>
-									<ListItemText primary={`Jon Snow`} />
-								</ListItemButton>
+								<ListUnit />
 							</List>
 						</Grid>
 					</Grid>
