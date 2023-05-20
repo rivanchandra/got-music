@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Fab from '@mui/material/Fab';
-import MapIcon from '@mui/icons-material/Map';
+import RouteIcon from '@mui/icons-material/Route';
 import Drawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -61,10 +61,15 @@ export default function MapPage() {
 	return (
 		<>
 			<Fab
-				sx={{ position: 'fixed', bottom: '30px', left: '26%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
+				sx={{ 
+					borderRadius: '60px',
+          color: '#ffffff',
+          border: 'solid #ffffff 2px',
+          backgroundColor: 'rgba(0,0,0,0)',
+					position: 'fixed', bottom: '30px', left: '26%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
 				onClick={() => setDrawer(true)}
 			>
-				<MapIcon />
+				<RouteIcon />
 			</Fab>
 			<Drawer
 				anchor="right"

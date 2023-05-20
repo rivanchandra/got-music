@@ -125,19 +125,38 @@ export default function Home() {
       </Typography>
       <Fab
         variant="outlined" 
-        sx={{ position: 'fixed', bottom: '30px', left: '3%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
+        sx={{ 
+          borderRadius: '60px',
+          color: '#ffffff',
+          border: 'solid #ffffff 2px',
+          backgroundColor: 'rgba(0,0,0,0)',
+          position: 'fixed', 
+          bottom: '30px', 
+          left: '3%', 
+          transform: 'translateX(-50%)' 
+        }} color="primary" aria-label="add" size="small"
         onClick={()=> move('prev')}
       >
         <FastRewindIcon />
       </Fab>
       <Fab 
-        sx={{ position: 'fixed', bottom: '30px', left: '7%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" 
+        sx={{ 
+          borderRadius: '60px',
+          color: '#ffffff',
+          border: 'solid #ffffff 2px',
+          backgroundColor: 'rgba(0,0,0,0)',
+          position: 'fixed', bottom: '30px', left: '7%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" 
         onClick={start}
       >
         {livestream?<PauseIcon />:<PlayArrowIcon />}
       </Fab>
       <Fab 
-        sx={{ position: 'fixed', bottom: '30px', left: '11%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
+        sx={{ 
+          borderRadius: '60px',
+          color: '#ffffff',
+          border: 'solid #ffffff 2px',
+          backgroundColor: 'rgba(0,0,0,0)',
+          position: 'fixed', bottom: '30px', left: '11%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
         onClick={()=> move('next')}
       >
         <FastForwardIcon />
@@ -153,13 +172,23 @@ export default function Home() {
         onChange={handleChange} 
       />
       <Fab 
-        sx={{ position: 'fixed', bottom: '30px', left: '17%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
+        sx={{ 
+          borderRadius: '60px',
+          color: '#ffffff',
+          border: 'solid #ffffff 2px',
+          backgroundColor: 'rgba(0,0,0,0)',
+          position: 'fixed', bottom: '30px', left: '17%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
         onClick={() => suffleMusic()}
       >
         <ShuffleIcon />
       </Fab>
       <Fab 
-        sx={{ position: 'fixed', bottom: '30px', left: '20%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
+        sx={{ 
+          borderRadius: '60px',
+          color: '#ffffff',
+          border: 'solid #ffffff 2px',
+          backgroundColor: 'rgba(0,0,0,0)',
+          position: 'fixed', bottom: '30px', left: '20%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
         onClick={() => handleClickFullscreen()}
       >
         {fullscreenIcon?<FullscreenIcon />:<FullscreenExitIcon />}
@@ -175,7 +204,12 @@ export default function Home() {
       />
       <Fab
         variant="outlined" 
-        sx={{ position: 'fixed', bottom: '30px', right: '1%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
+        sx={{ 
+          borderRadius: '60px',
+          color: '#ffffff',
+          border: 'solid #ffffff 2px',
+          backgroundColor: 'rgba(0,0,0,0)',
+          position: 'fixed', bottom: '30px', right: '1%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
         onClick={handleClick}
       >
         <ListIcon />

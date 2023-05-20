@@ -11,7 +11,12 @@ export default function DrawerPage() {
   return(
     <>
       <Fab 
-          sx={{ position: 'fixed', bottom: '30px', left: '23%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
+          sx={{ 
+            borderRadius: '60px',
+          color: '#ffffff',
+          border: 'solid #ffffff 2px',
+          backgroundColor: 'rgba(0,0,0,0)',
+          position: 'fixed', bottom: '30px', left: '23%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
           onClick={()=>setDrawer(true)}
       >
         <AutoStoriesIcon />
