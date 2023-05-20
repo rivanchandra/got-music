@@ -13,6 +13,8 @@ import Avatar from '@mui/material/Avatar';
 
 import Map, {Marker} from 'react-map-gl';
 
+import { journey } from '../resources/journey.js'
+
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 const MAPBOX_TOKEN = 'pk.eyJ1Ijoicml2YW5jaGFuIiwiYSI6ImNsaHNzMXR4NjBzOTMzaG9hcDN6ZTcxemoifQ.YdGmErhcP7pYQ2gbAWQNug';
@@ -20,10 +22,21 @@ const MAPBOX_TOKEN = 'pk.eyJ1Ijoicml2YW5jaGFuIiwiYSI6ImNsaHNzMXR4NjBzOTMzaG9hcDN
 export default function MapPage() {
 	const [drawer, setDrawer] = useState(false);
 	const [selectedIndex, setSelectedIndex] = useState(1);
+	const [selected, setSelected] = useState(0);
 
 	const handleListItemClick = (event, index) => {
 		setSelectedIndex(index);
 	};
+
+	const MarkerUnit = () => {
+		
+		return journey[selected].location.map((data, index) => (
+			<Marker key={index} longitude={data.longitude} latitude={data.latitude} anchor="bottom">
+				<Avatar sx={{ fontSize: 10, width: 15, height: 15, bgcolor: 'blue' }}>{index+1}</Avatar>
+			</Marker>
+		));
+
+	}
 
 	return (
 		<>
@@ -51,6 +64,7 @@ export default function MapPage() {
 								mapStyle="mapbox://styles/rivanchan/clhsk42gv021d01qyfg3m7ygr"
 								mapboxAccessToken={MAPBOX_TOKEN}
 							>
+								<MarkerUnit />
 							</Map>
 						</Grid>
 						<Grid item xs={2}>
