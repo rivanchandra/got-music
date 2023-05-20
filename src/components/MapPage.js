@@ -71,7 +71,7 @@ export default function MapPage() {
 				open={drawer}
 				onClose={() => setDrawer(false)}
 			>
-				<Box component="span" sx={{ p: 2, width: [500, 800, 1000] }}>
+				<Box component="span" sx={{ p: 2, width: [500, 800, 1050] }}>
 					<Grid container spacing={2}>
 						<Grid item xs={10}>
 							<Map
@@ -88,7 +88,15 @@ export default function MapPage() {
 							</Map>
 						</Grid>
 						<Grid item xs={2}>
-							<List component="nav" aria-label="secondary mailbox folder">
+							<List
+								sx={{
+									position: 'relative',
+									overflow: 'auto',
+									maxHeight: '90vh'
+								}}
+								component="nav" 
+								aria-label="secondary mailbox folder"
+							>
 								<ListUnit />
 							</List>
 						</Grid>

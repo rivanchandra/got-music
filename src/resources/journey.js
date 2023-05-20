@@ -139,4 +139,272 @@ export const journey = [
 			},
 		]
 	},
+	{
+		name: 'Catelyn Stark',
+		image: '/images/char/arya.jpg',
+		location: [
+			{
+				longitude: 14.56406, 
+				latitude: 26.64100
+			},
+			{
+				longitude: 19.06610, 
+				latitude: 3.97758
+			},
+			{
+				longitude: 19.92920, 
+				latitude: 12.23266
+			},
+			{
+				longitude: 13.29346, 
+				latitude: 9.49241
+			},
+			{
+				longitude: 13.29345,
+				latitude: 14.47724
+			},
+		]
+	},
+	{
+		name: 'Eddard Stark',
+		image: '/images/char/arya.jpg',
+		location: [
+			{
+				longitude: 14.56406, 
+				latitude: 26.64100
+			},
+			{
+				longitude: 19.06610, 
+				latitude: 3.97758
+			},
+			{
+				longitude: 14.34823, 
+				latitude: -5.10917
+			},
+		]
+	},
+	{
+		name: 'Robb Stark',
+		image: '/images/char/arya.jpg',
+		location: [
+			{
+				longitude: 14.56406, 
+				latitude: 26.64100
+			},
+			{
+				longitude: 13.29183, 
+				latitude: 9.49273 
+			},
+			{
+				longitude: 8.39230, 
+				latitude: 8.82198
+			},
+			{
+				longitude: 16.89527,
+				latitude: 8.38708
+			},
+			{
+				longitude: 13.29182,
+				latitude: 14.48116
+			}
+		]
+	},
+	{
+		name: 'Sansa Stark',
+		image: '/images/char/arya.jpg',
+		location: [
+			{
+				longitude: 14.54984,
+				latitude: 26.63530
+			},
+			{
+				longitude: 19.06610, 
+				latitude: 3.97758
+			},
+			{
+				longitude: 19.92748,
+				latitude: 12.24767
+			},
+			{
+				longitude: 18.85306,
+				latitude: 34.90464
+			}
+		]
+	},
+	{
+		name: 'Sansa Stark',
+		image: '/images/char/arya.jpg',
+		location: [
+			{
+				longitude: 14.54984,
+				latitude: 26.63530
+			},
+			{
+				longitude: 19.06610, 
+				latitude: 3.97758
+			},
+			{
+				longitude: 19.92748,
+				latitude: 12.24767
+			},
+			{
+				longitude: 18.85306,
+				latitude: 34.90464
+			}
+		]
+	},
+	{
+		name: 'Sansa Stark',
+		image: '/images/char/arya.jpg',
+		location: [
+			{
+				longitude: 14.54984,
+				latitude: 26.63530
+			},
+			{
+				longitude: 19.06610, 
+				latitude: 3.97758
+			},
+			{
+				longitude: 19.92748,
+				latitude: 12.24767
+			},
+			{
+				longitude: 18.85306,
+				latitude: 34.90464
+			}
+		]
+	},
+	{
+		name: 'Sansa Stark',
+		image: '/images/char/arya.jpg',
+		location: [
+			{
+				longitude: 14.54984,
+				latitude: 26.63530
+			},
+			{
+				longitude: 19.06610, 
+				latitude: 3.97758
+			},
+			{
+				longitude: 19.92748,
+				latitude: 12.24767
+			},
+			{
+				longitude: 18.85306,
+				latitude: 34.90464
+			}
+		]
+	},
+	{
+		name: 'Sansa Stark',
+		image: '/images/char/arya.jpg',
+		location: [
+			{
+				longitude: 14.54984,
+				latitude: 26.63530
+			},
+			{
+				longitude: 19.06610, 
+				latitude: 3.97758
+			},
+			{
+				longitude: 19.92748,
+				latitude: 12.24767
+			},
+			{
+				longitude: 18.85306,
+				latitude: 34.90464
+			}
+		]
+	},
+	{
+		name: 'Sansa Stark',
+		image: '/images/char/arya.jpg',
+		location: [
+			{
+				longitude: 14.54984,
+				latitude: 26.63530
+			},
+			{
+				longitude: 19.06610, 
+				latitude: 3.97758
+			},
+			{
+				longitude: 19.92748,
+				latitude: 12.24767
+			},
+			{
+				longitude: 18.85306,
+				latitude: 34.90464
+			}
+		]
+	},
+	{
+		name: 'Sansa Stark',
+		image: '/images/char/arya.jpg',
+		location: [
+			{
+				longitude: 14.54984,
+				latitude: 26.63530
+			},
+			{
+				longitude: 19.06610, 
+				latitude: 3.97758
+			},
+			{
+				longitude: 19.92748,
+				latitude: 12.24767
+			},
+			{
+				longitude: 18.85306,
+				latitude: 34.90464
+			}
+		]
+	},
+	{
+		name: 'Sansa Stark',
+		image: '/images/char/arya.jpg',
+		location: [
+			{
+				longitude: 14.54984,
+				latitude: 26.63530
+			},
+			{
+				longitude: 19.06610, 
+				latitude: 3.97758
+			},
+			{
+				longitude: 19.92748,
+				latitude: 12.24767
+			},
+			{
+				longitude: 18.85306,
+				latitude: 34.90464
+			}
+		]
+	},
+	{
+		name: 'Sansa Stark',
+		image: '/images/char/arya.jpg',
+		location: [
+			{
+				longitude: 14.54984,
+				latitude: 26.63530
+			},
+			{
+				longitude: 19.06610, 
+				latitude: 3.97758
+			},
+			{
+				longitude: 19.92748,
+				latitude: 12.24767
+			},
+			{
+				longitude: 18.85306,
+				latitude: 34.90464
+			}
+		]
+	},
 ]
