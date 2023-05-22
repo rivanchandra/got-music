@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import Fab from '@mui/material/Fab';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
@@ -11,6 +11,7 @@ import ShuffleIcon from '@mui/icons-material/Shuffle';
 import ListIcon from '@mui/icons-material/List';
 
 import screenfull from 'screenfull';
+import SmokeElement from "smoke-effect-react";
 
 import FullscreenIcon from '@mui/icons-material/Fullscreen';
 import FullscreenExitIcon from '@mui/icons-material/FullscreenExit';
@@ -37,6 +38,17 @@ export default function Home() {
   const [currentPicture, setCurrentPicture] = useState(pictureList[0].path);
   const [volume, setVolume] = useState(100);
   const [fullscreenIcon, setFullscreenIcon] = useState(true);
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://cdn.lordicon.com/bhenfmcm.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   const start = () => {
     const start = livestream?false:true;
@@ -148,7 +160,21 @@ export default function Home() {
           position: 'fixed', bottom: '30px', left: '7%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" 
         onClick={start}
       >
-        {livestream?<PauseIcon />:<PlayArrowIcon />}
+        {livestream?
+          <lord-icon
+            src="https://cdn.lordicon.com/ensnyqet.json"
+            trigger="loop-on-hover"
+            colors="primary:#ffffff"
+            state="hover">
+          </lord-icon>
+        :
+        <lord-icon
+          src="https://cdn.lordicon.com/xddtsyvc.json"
+          trigger="loop-on-hover"
+          colors="primary:#ffffff"
+          state="hover">
+        </lord-icon>
+        }
       </Fab>
       <Fab 
         sx={{ 

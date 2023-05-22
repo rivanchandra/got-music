@@ -19,7 +19,12 @@ export default function DrawerPage() {
           position: 'fixed', bottom: '30px', left: '23%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
           onClick={()=>setDrawer(true)}
       >
-        <AutoStoriesIcon />
+        <lord-icon
+          src="https://cdn.lordicon.com/wxnxiano.json"
+          trigger="loop-on-hover"
+          colors="primary:#ffffff,secondary:#ffffff"
+          state="hover">
+      </lord-icon>
       </Fab>
       <Drawer
         anchor="right"

@@ -69,7 +69,14 @@ export default function MapPage() {
 					position: 'fixed', bottom: '30px', left: '26%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
 				onClick={() => setDrawer(true)}
 			>
-				<RouteIcon />
+				
+				<lord-icon
+						src="https://cdn.lordicon.com/zzcjjxew.json"
+						trigger="loop-on-hover"
+						colors="primary:#ffffff,secondary:#ffffff"
+						state="loop-spin"
+						style={{width:'100px', height:'100px'}}>
+				</lord-icon>
 			</Fab>
 			<Drawer
 				anchor="right"
