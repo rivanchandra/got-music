@@ -11,7 +11,6 @@ import ShuffleIcon from '@mui/icons-material/Shuffle';
 import ListIcon from '@mui/icons-material/List';
 
 import screenfull from 'screenfull';
-import SmokeElement from "smoke-effect-react";
 
 import FullscreenIcon from '@mui/icons-material/Fullscreen';
 import FullscreenExitIcon from '@mui/icons-material/FullscreenExit';
