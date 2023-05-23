@@ -74,12 +74,12 @@ export default function DrawerPage() {
                       </Typography>
                       <br/>
                       <Typography>
-                        Eddard travels to the capital city of King's Landing with his daughters Sansa and Arya, leaving his wife Catelyn and their other children behind. Meanwhile, Jon Snow, Eddard's illegitimate son, joins the Night's Watch, a brotherhood tasked with defending the realm from the dangers beyond the Wall.
+                        Eddard travels to the capital city of King&apos;s Landing with his daughters Sansa and Arya, leaving his wife Catelyn and their other children behind. Meanwhile, Jon Snow, Eddard&apos;s illegitimate son, joins the Night&apos;s Watch, a brotherhood tasked with defending the realm from the dangers beyond the Wall.
                       </Typography>
                     </Grid>
                     <Grid item xs={12}>
                       <Typography>
-                        As Eddard starts unraveling the truth about Jon Arryn's death, he discovers that Jon Arryn was investigating the legitimacy of Robert's children, suspecting that they are not his own. Eddard becomes increasingly embroiled in the dangerous game of politics, navigating the treacherous court while trying to protect his family.
+                        As Eddard starts unraveling the truth about Jon Arryn&apos;s death, he discovers that Jon Arryn was investigating the legitimacy of Robert&apos;s children, suspecting that they are not his own. Eddard becomes increasingly embroiled in the dangerous game of politics, navigating the treacherous court while trying to protect his family.
                       </Typography>
                       <br/>
                       <Typography>
@@ -87,15 +87,15 @@ export default function DrawerPage() {
                       </Typography>
                       <br/>
                       <Typography>
-                        Back in King's Landing, Eddard uncovers a shocking secret: Robert's children are not his, but rather the product of an incestuous relationship between Queen Cersei Lannister and her brother Jaime. Eddard confronts Cersei, but his efforts to expose the truth are thwarted when he is betrayed by Petyr Baelish, the master of coin, and captured.
+                        Back in King&apos;s Landing, Eddard uncovers a shocking secret: Robert&apos;s children are not his, but rather the product of an incestuous relationship between Queen Cersei Lannister and her brother Jaime. Eddard confronts Cersei, but his efforts to expose the truth are thwarted when he is betrayed by Petyr Baelish, the master of coin, and captured.
                       </Typography>
                       <br/>
                       <Typography>
-                        Meanwhile, Daenerys discovers she is pregnant and begins hatching dragon eggs gifted to her as wedding presents. The Dothraki respect her increasingly as the "Mother of Dragons."
+                        Meanwhile, Daenerys discovers she is pregnant and begins hatching dragon eggs gifted to her as wedding presents. The Dothraki respect her increasingly as the &quot;Mother of Dragons&quot;.
                       </Typography>
                       <br/>
                       <Typography>
-                        As the season concludes, Eddard is falsely accused of treason and is executed on the orders of the new King Joffrey Baratheon, Robert's eldest "son." This event sets off a chain of events that will further escalate the power struggles and ignite a full-scale war for the Iron Throne in the subsequent seasons of "Game of Thrones."
+                        As the season concludes, Eddard is falsely accused of treason and is executed on the orders of the new King Joffrey Baratheon, Robert&apos;s eldest &quot;son.&quot; This event sets off a chain of events that will further escalate the power struggles and ignite a full-scale war for the Iron Throne in the subsequent seasons of &quot;Game of Thrones&quot;.
                       </Typography>
                       <iframe width="560" height="315" src="https://www.youtube.com/embed/_AnHvH2A8A4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </Grid>
