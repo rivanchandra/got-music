@@ -127,7 +127,7 @@ export default function Home() {
         }}
       />
       <Typography 
-        style={{ fontFamily: 'MyCustomFont' }}
+        style={{ fontFamily: 'GameOfThrones' }}
         sx={{ position: 'fixed', bottom: '150px', left: '1%' }}
         variant="h5"
         gutterBottom

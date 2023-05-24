@@ -8,7 +8,16 @@
   color: #d3d3d3;
 }
 
+body {
+  font-family: 'Medieval'
+}
+
 @font-face {
-  font-family: 'MyCustomFont';
+  font-family: 'GameOfThrones';
   src: url('/Game of Thrones.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Medieval';
+  src: url('/1529 Champ Fleury W01 Regular.ttf') format('truetype');
 }
