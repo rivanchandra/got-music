@@ -13,7 +13,7 @@ import Avatar from '@mui/material/Avatar';
 
 import Map, {Marker} from 'react-map-gl';
 
-import { journey } from '../resources/journey.js'
+import { journey } from '../resources/journey.js';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 
