@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
 import Fab from '@mui/material/Fab';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import Drawer from '@mui/material/Drawer';
@@ -14,6 +15,8 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
+const ReactPlayer = dynamic(() => import("react-player/youtube"), { ssr: false });
 
 import { gotStory } from '../resources/story.js';
 
