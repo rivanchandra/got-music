@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import Fab from '@mui/material/Fab';
 import RouteIcon from '@mui/icons-material/Route';
 import Drawer from '@mui/material/Drawer';
@@ -11,9 +11,17 @@ import Divider from '@mui/material/Divider';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 
-import Map, {Marker} from 'react-map-gl';
+import Map, 
+{	Marker,
+	Popup,
+	NavigationControl,
+  FullscreenControl,
+  ScaleControl,
+  GeolocateControl
+} from 'react-map-gl';
 
 import { journey } from '../resources/journey.js';
+import Pin from './Pin.js';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 
@@ -23,11 +31,32 @@ export default function MapPage() {
 	const [drawer, setDrawer] = useState(false);
 	const [selectedIndex, setSelectedIndex] = useState(-1);
 	const [selected, setSelected] = useState(-1);
+	const [popupInfo, setPopupInfo] = useState(null);
 
 	const handleListItemClick = (event, index) => {
 		setSelectedIndex(index);
 		setSelected(index);
+		setPopupInfo(null)
 	};
+
+  const PinsMarker = () => {
+		return journey[selected].location.map((data, index) => (
+			<Marker
+				key={`marker-${index}`}
+				longitude={data.longitude}
+				latitude={data.latitude}
+				anchor="bottom"
+				onClick={e => {
+					// If we let the click event propagates to the map, it will immediately close the popup
+					// with `closeOnClick: true`
+					e.originalEvent.stopPropagation();
+					setPopupInfo(data);
+				}}
+			>
+				<Pin number={index+1} bgColor={journey[selected].bgcolor} txColor={journey[selected].txcolor} />
+			</Marker>
+		));
+	}
 
 	const MarkerUnit = () => {
 		return journey[selected].location.map((data, index) => (
@@ -96,7 +125,28 @@ export default function MapPage() {
 								mapStyle="mapbox://styles/rivanchan/clhsk42gv021d01qyfg3m7ygr"
 								mapboxAccessToken={MAPBOX_TOKEN}
 							>
-								{selected > -1?<MarkerUnit />:''}
+								
+								<FullscreenControl position="top-right" />
+								<NavigationControl position="top-right" />
+								<ScaleControl />
+								
+								{selected > -1?
+									<>
+										<PinsMarker />
+										{popupInfo && (
+											<Popup
+												anchor="top"
+												longitude={(popupInfo.longitude)}
+												latitude={(popupInfo.latitude)}
+												onClose={() => setPopupInfo(null)}
+											>
+												<div>
+														test
+												</div>
+											</Popup>
+										)}
+									</>
+								:''}
 							</Map>
 						</Grid>
 						<Grid item xs={2}>

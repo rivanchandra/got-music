@@ -2,6 +2,8 @@ export const journey = [
 	{
 		name: 'Daenerys',
 		image: '/images/char/daenerys.png',
+		bgcolor: '#EF0000',
+		txcolor: '#fff',
 		location: [
 			{
 				longitude: 31.11325,
@@ -48,6 +50,8 @@ export const journey = [
 	{
 		name: 'Jon Snow',
 		image: '/images/char/jon.png',
+		bgcolor: '#00B2FF',
+		txcolor: '#2E2E2E',
 		location: [
 			{
 				longitude: 14.54600,
@@ -82,6 +86,8 @@ export const journey = [
 	{
 		name: 'Tyrion Lannister',
 		image: '/images/char/tyrion.jpg',
+		bgcolor: '#F1A100',
+		txcolor: '#fff',
 		location: [
 			{
 				longitude: 14.54950,
@@ -116,6 +122,8 @@ export const journey = [
 	{
 		name: 'Arya Stark',
 		image: '/images/char/arya.jpg',
+		bgcolor: '#D975FF',
+		txcolor: '#2E2E2E',
 		location: [
 			{
 				longitude: 14.55506,
@@ -141,7 +149,9 @@ export const journey = [
 	},
 	{
 		name: 'Catelyn Stark',
-		image: '/images/char/arya.jpg',
+		image: '/images/char/catelyn.png',
+		bgcolor: '#9F3AFF',
+		txcolor: '#2E2E2E',
 		location: [
 			{
 				longitude: 14.56406, 
@@ -167,7 +177,9 @@ export const journey = [
 	},
 	{
 		name: 'Eddard Stark',
-		image: '/images/char/arya.jpg',
+		image: '/images/char/eddard.jpg',
+		bgcolor: '#000598',
+		txcolor: '#fff',
 		location: [
 			{
 				longitude: 14.56406, 
@@ -185,7 +197,9 @@ export const journey = [
 	},
 	{
 		name: 'Robb Stark',
-		image: '/images/char/arya.jpg',
+		image: '/images/char/robb.jpg',
+		bgcolor: '#007ECF',
+		txcolor: '#2E2E2E',
 		location: [
 			{
 				longitude: 14.56406, 
@@ -211,7 +225,9 @@ export const journey = [
 	},
 	{
 		name: 'Sansa Stark',
-		image: '/images/char/arya.jpg',
+		image: '/images/char/sansa.jpg',
+		bgcolor: '#FF50F2',
+		txcolor: '#2E2E2E',
 		location: [
 			{
 				longitude: 14.54984,
