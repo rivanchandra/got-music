@@ -141,7 +141,7 @@ export default function MapPage() {
 												onClose={() => setPopupInfo(null)}
 											>
 												<div>
-														test
+														{popupInfo.desc}
 												</div>
 											</Popup>
 										)}

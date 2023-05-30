@@ -7,43 +7,56 @@ export const journey = [
 		location: [
 			{
 				longitude: 31.11325,
-				latitude: 4.65308
+				latitude: 4.65308,
+				desc: 'Daenerys begins her journey in Pentos, a city in the Free Cities, under the guardianship of her brother Viserys.'
 			},
 			{
 				longitude: 64.91177,
-				latitude: -1.12685
+				latitude: -1.12685,
+				desc: "Daenerys is married off to Khal Drogo, the leader of the Dothraki, and travels with him to the Dothraki Sea. She continues her time with the Dothraki, trying to gain their loyalty and support."
 			},
 			{
 				longitude: 87.98240,
-				latitude: -34.57624
+				latitude: -34.57624,
+				desc: "She eventually hatches three dragon eggs that she received as wedding gifts, and her dragons are born in Qarth, a wealthy city in Essos."
+				
 			},
 			{
 				longitude: 64.90760,
-				latitude: -15.21987
+				latitude: -15.21987,
+				desc: 'Daenerys leaves Qarth and travels to the city of Astapor, where she acquires an army of Unsullied soldiers by trading one of her dragons. She then heads to the city of Yunkai, which she liberates.'
+				
 			},
 			{
 				longitude: 65.83161,
-				latitude: -11.24042
+				latitude: -11.24042,
+				desc: 'Daenerys sets her sights on the city of Meereen, the largest of the three great slave cities. With her growing army and dragons, she conquers Meereen and takes control of the city.'
+				
 			},
 			{
 				longitude: 67.12675,
-				latitude: -9.59436
+				latitude: -9.59436,
+				desc: 'Daenerys faces challenges in ruling Meereen, including dealing with a rebellion called the Sons of the Harpy. She also encounters Tyrion Lannister, who becomes her advisor.'
 			},
 			{
 				longitude: 24.34308,
-				latitude: 7.07445
+				latitude: 7.07445,
+				desc: 'Daenerys sets sail for Westeros with her allies and armies, aiming to reclaim the Iron Throne. She arrives in Dragonstone, the ancestral seat of House Targaryen, and begins planning her conquest.'
 			},
 			{
 				longitude: 12.84511,
-				latitude: 43.48677
+				latitude: 43.48677,
+				desc: "Daenerys forms an alliance with Jon Snow, the King in the North, to fight against the Night King and his army of the dead."
 			},
 			{
 				longitude: 14.54099,
-				latitude: 26.66093
+				latitude: 26.66093,
+				desc: "Daenerys and her forces engage in the Battle of Winterfell against the Night King's army."
 			},
 			{
 				longitude: 19.07680,
-				latitude: 3.98406
+				latitude: 3.98406,
+				desc: "Afterward, she marches towards King's Landing to face Cersei, but her quest for power takes a dark turn, leading to tragic consequences."
 			}
 		]
 	},
