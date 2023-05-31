@@ -68,31 +68,38 @@ export const journey = [
 		location: [
 			{
 				longitude: 14.54600,
-				latitude: 26.63140
+				latitude: 26.63140,
+				
 			},
 			{
 				longitude: 18.85107,
-				latitude: 34.90808
+				latitude: 34.90808,
+				desc: "Jon Snow begins his journey as a member of the Night's Watch, stationed at Castle Black, which is located at the northern border of the Seven Kingdoms. He undergoes training and learns about the threat of the White Walkers."
 			},
 			{
 				longitude: 16.23750,
-				latitude: 37.21608
+				latitude: 37.21608,
+				desc: "Jon ventures beyond the Wall with a group of Night's Watch members led by Qhorin Halfhand. He infiltrates the wildlings and develops a relationship with Ygritte, a wildling woman. He also encounters Mance Rayder, the King Beyond the Wall."
 			},
 			{
 				longitude: 17.62768,
-				latitude: 36.29920
+				latitude: 36.29920,
+				desc: "Jon remains with the wildlings, earning their trust while still maintaining his allegiance to the Night's Watch. He witnesses the power and threat of the White Walkers firsthand. Eventually, he betrays the wildlings and returns to Castle Black."
 			},
 			{
 				longitude: 24.35414,
-				latitude: 7.06461
+				latitude: 7.06461,
+				desc: "Jon travels to Dragonstone, where he meets Daenerys Targaryen and forges an alliance with her against the White Walkers. He learns about his true parentage and becomes romantically involved with Daenerys."
 			},
 			{
 				longitude: 12.84511,
-				latitude: 43.48677
+				latitude: 43.48677,
+				desc: ""
 			},
 			{
 				longitude: 19.07291,
-				latitude: 3.97701
+				latitude: 3.97701,
+				desc: "Jon plays a crucial role in the Battle of Winterfell against the Night King's army. Following the battle, he faces the aftermath of Daenerys's descent into madness and ultimately kills her to prevent further destruction. He is exiled to the Night's Watch but later leaves with the wildlings to live beyond the Wall."
 			},
 		]
 	},
