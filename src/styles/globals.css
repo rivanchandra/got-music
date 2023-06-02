@@ -23,7 +23,7 @@ body {
 }
 
 .MuiDrawer-paper {
-  background-color: rgb(255, 255, 255,0);
+  background-color: hsla(0,0%,100%,0) !important;
   background: url("https://static.vecteezy.com/system/resources/previews/012/981/812/original/old-parchment-paper-sheet-vintage-aged-or-texture-background-png.png");
   background-position: left center;
   box-shadow: none;
