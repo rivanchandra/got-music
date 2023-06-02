@@ -21,3 +21,10 @@ body {
   font-family: 'Medieval';
   src: url('/1529 Champ Fleury W01 Regular.ttf') format('truetype');
 }
+
+.MuiDrawer-paper {
+  background: url("https://static.vecteezy.com/system/resources/previews/012/981/812/original/old-parchment-paper-sheet-vintage-aged-or-texture-background-png.png");
+  background-position: left center;
+  box-shadow: none;
+  padding-left: 5vw;
+}
