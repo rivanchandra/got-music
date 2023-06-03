@@ -10,6 +10,7 @@ import PauseIcon from '@mui/icons-material/Pause';
 import ShuffleIcon from '@mui/icons-material/Shuffle';
 import ListIcon from '@mui/icons-material/List';
 import PaymentsIcon from '@mui/icons-material/Payments';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 import screenfull from 'screenfull';
 
@@ -257,7 +258,7 @@ export default function Home() {
           )
         })}
       </Menu>
-      <a href="https://paypal.me/rivanchandra?country.x=ID&locale.x=id_ID" target="_blank">
+      {/* <a href="https://paypal.me/rivanchandra?country.x=ID&locale.x=id_ID" target="_blank">
         <Fab
           variant="outlined" 
           sx={{ 
@@ -268,6 +269,19 @@ export default function Home() {
             position: 'fixed', bottom: '30px', right: '4%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
         >
           <PaymentsIcon />
+        </Fab>
+      </a> */}
+      <a href="https://github.com/rivanchandra" target="_blank">
+        <Fab
+          variant="outlined" 
+          sx={{ 
+            borderRadius: '60px',
+            color: '#ffffff',
+            border: 'solid #ffffff 2px',
+            backgroundColor: 'rgba(0,0,0,0)',
+            position: 'fixed', bottom: '30px', right: '4%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
+        >
+          <GitHubIcon />
         </Fab>
       </a>
     </>
