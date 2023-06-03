@@ -92,7 +92,7 @@ export default function DrawerPage() {
           trigger="loop-on-hover"
           colors="primary:#ffffff,secondary:#ffffff"
           state="hover">
-      </lord-icon>
+        </lord-icon>
       </Fab>
       <Drawer
         anchor="right"

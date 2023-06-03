@@ -1072,265 +1072,265 @@ export const list = [
 		disable: false
 	},
 	{
-		id: 179,
+		id: 180,
 		name: 'The Heirs of the Dragon',
 		url: 'https://youtu.be/ZLDiFM4trIU',
 		disable: false
 	},
 	{
-		id: 180,
+		id: 181,
 		name: 'The Heirs of the Dragon',
 		url: 'https://youtu.be/geJqFx7x5qI',
 		disable: false
 	},
 	{
-		id: 181,
+		id: 182,
 		name: 'Reign of the Targaryens',
 		url: 'https://youtu.be/ZLDiFM4trIU',
 		disable: false
 	},
 	{
-		id: 182,
+		id: 183,
 		name: 'Rhaenyra’s Welcome',
 		url: 'https://youtu.be/rzLAXgN2hjg',
 		disable: false
 	},
 	{
-		id: 183,
+		id: 184,
 		name: 'A Pack of Hounds',
 		url: 'https://youtu.be/ni8x6ICJlqo',
 		disable: false
 	},
 	{
-		id: 184,
+		id: 185,
 		name: 'The Tournament',
 		url: 'https://youtu.be/CJA4C9zTnbI',
 		disable: false
 	},
 	{
-		id: 185,
+		id: 186,
 		name: 'An Impossible Choice',
 		url: 'https://youtu.be/ViDZF8aw0L8',
 		disable: false
 	},
 	{
-		id: 186,
+		id: 187,
 		name: 'The Rogue Prince',
 		url: 'https://youtu.be/OUmPEgt_b6U',
 		disable: false
 	},
 	{
-		id: 187,
+		id: 188,
 		name: 'The Prince That Was Promised',
 		url: 'https://youtu.be/FJ_eHXN6gRg',
 		disable: false
 	},
 	{
-		id: 188,
+		id: 189,
 		name: 'Compromise and Consequences',
 		url: 'https://youtu.be/tEfS_DCLf-g',
 		disable: false
 	},
 	{
-		id: 189,
+		id: 190,
 		name: 'The Power of Prophecy',
 		url: 'https://youtu.be/Iz4pnCrxdRc',
 		disable: false
 	},
 	{
-		id: 190,
+		id: 191,
 		name: 'Trouble in the Stepstones',
 		url: 'https://youtu.be/k-moXjwn5kM',
 		disable: false
 	},
 	{
-		id: 191,
+		id: 192,
 		name: 'Surrender',
 		url: 'https://youtu.be/BHzdO6W3ZGo',
 		disable: false
 	},
 	{
-		id: 192,
+		id: 193,
 		name: 'King of the Narrow Sea',
 		url: 'https://youtu.be/7fGcnhioZt8',
 		disable: false
 	},
 	{
-		id: 193,
+		id: 194,
 		name: 'Lanterns at Nightfall',
 		url: 'https://youtu.be/7fGcnhioZt8',
 		disable: false
 	},
 	{
-		id: 194,
+		id: 195,
 		name: 'Whatever May Come',
 		url: 'https://youtu.be/v8lSlQgvixs',
 		disable: false
 	},
 	{
-		id: 195,
+		id: 196,
 		name: 'House Velaryon',
 		url: 'https://youtu.be/Ulm1ehF-260',
 		disable: false
 	},
 	{
-		id: 196,
+		id: 197,
 		name: 'The Green Dress',
 		url: 'https://youtu.be/WhrY5Z0MCJk',
 		disable: false
 	},
 	{
-		id: 197,
+		id: 198,
 		name: 'First Dance',
 		url: 'https://youtu.be/GMjvvGAPFKQ',
 		disable: false
 	},
 	{
-		id: 198,
+		id: 199,
 		name: 'Celebration Dance',
 		url: 'https://youtu.be/HYz8LQ4_Cqc',
 		disable: false
 	},
 	{
-		id: 199,
+		id: 200,
 		name: 'Targaryen Dance',
 		url: 'https://youtu.be/xnHvroTow48',
 		disable: false
 	},
 	{
-		id: 179,
+		id: 201,
 		name: 'We Light the Way',
 		url: 'https://youtu.be/FOFtvTWMaD4',
 		disable: false
 	},
 	{
-		id: 200,
+		id: 202,
 		name: 'Destiny',
 		url: 'https://youtu.be/j_W3cNXhTrU',
 		disable: false
 	},
 	{
-		id: 201,
+		id: 203,
 		name: 'Pass Judgement',
 		url: 'https://youtu.be/heRRAaDQvsE',
 		disable: false
 	},
 	{
-		id: 202,
+		id: 204,
 		name: 'Funeral by the Sea',
 		url: 'https://youtu.be/r6Bf7xHT6l4',
 		disable: false
 	},
 	{
-		id: 203,
+		id: 205,
 		name: 'Daemon and Rhaenyra',
 		url: 'https://youtu.be/myCOLqsE9Xc',
 		disable: false
 	},
 	{
-		id: 204,
+		id: 206,
 		name: 'Aemond Rides Vhagar',
 		url: 'https://youtu.be/G28_x7cpoXw',
 		disable: false
 	},
 	{
-		id: 205,
+		id: 207,
 		name: 'The Hard Truth',
 		url: 'https://youtu.be/RO6m8z4OMag',
 		disable: false
 	},
 	{
-		id: 206,
+		id: 208,
 		name: 'Sealed in Fire and Blood',
 		url: 'https://youtu.be/qMiVXwmaa-Q',
 		disable: false
 	},
 	{
-		id: 207,
+		id: 209,
 		name: 'Protector of the Realm',
 		url: 'https://youtu.be/fIDvKrUM1V0',
 		disable: false
 	},
 	{
-		id: 208,
+		id: 210,
 		name: 'The Silent Sisters',
 		url: 'https://youtu.be/-Jz265qro8M',
 		disable: false
 	},
 	{
-		id: 209,
+		id: 211,
 		name: 'The Language of Girls',
 		url: 'https://youtu.be/hp5R9rBkBRw',
 		disable: false
 	},
 	{
-		id: 210,
+		id: 212,
 		name: 'A Warning',
 		url: 'https://youtu.be/FJADNAtUKfE',
 		disable: false
 	},
 	{
-		id: 211,
+		id: 213,
 		name: 'Lament',
 		url: 'https://youtu.be/7cFSfj42ilo',
 		disable: false
 	},
 	{
-		id: 212,
+		id: 214,
 		name: 'Fate of the Kingdoms',
 		url: 'https://youtu.be/BWwl7kwB2wQ',
 		disable: false
 	},
 	{
-		id: 213,
+		id: 215,
 		name: 'Interests of the Realm',
 		url: 'https://youtu.be/R8ieeTUe9Hg',
 		disable: false
 	},
 	{
-		id: 214,
+		id: 216,
 		name: 'Coronation',
 		url: 'https://youtu.be/j7KhIBlZsGE',
 		disable: false
 	},
 	{
-		id: 215,
+		id: 217,
 		name: 'Dragons Will Rule the Kingdom',
 		url: 'https://youtu.be/aKKyHkuEy_g',
 		disable: false
 	},
 	{
-		id: 216,
+		id: 218,
 		name: 'The Crown of Jaehaerys',
 		url: 'https://youtu.be/C9bA5XPVye4',
 		disable: false
 	},
 	{
-		id: 217,
+		id: 219,
 		name: 'Dragons Do Not Fear Blood',
 		url: 'https://youtu.be/85-GjwKFQk8',
 		disable: false
 	},
 	{
-		id: 218,
+		id: 220,
 		name: 'Death and Rebirth',
 		url: 'https://youtu.be/4pfChRKH1vU',
 		disable: false
 	},
 	{
-		id: 219,
+		id: 221,
 		name: 'True Meaning of Loyalty',
 		url: 'https://youtu.be/QhmbgK5EP5Q',
 		disable: false
 	},
 	{
-		id: 220,
+		id: 222,
 		name: 'Bloodlines Will Burn',
 		url: 'https://youtu.be/SqcPOt1agYs',
 		disable: false
 	},
 	{
-		id: 221,
+		id: 223,
 		name: 'The Promise',
 		url: 'https://youtu.be/i_CA1-D6ne0',
 		disable: false

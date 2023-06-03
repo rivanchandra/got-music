@@ -8,9 +8,10 @@ import Image from 'next/image';
 import Slider from '@mui/material/Slider';
 import PauseIcon from '@mui/icons-material/Pause';
 import ShuffleIcon from '@mui/icons-material/Shuffle';
-import ListIcon from '@mui/icons-material/List';
+
 import PaymentsIcon from '@mui/icons-material/Payments';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import WallpaperIcon from '@mui/icons-material/Wallpaper';
 
 import screenfull from 'screenfull';
 
@@ -24,6 +25,7 @@ import {list} from '../resources/list.js';
 import {pictures} from '../resources/pictures.js';
 import DrawerPage from '../components/DrawerPage.js';
 import MapPage from '../components/MapPage.js';
+import MusicListPage from '@/components/MusicListPage.js';
 
 const ReactPlayer = dynamic(() => import("react-player/youtube"), { ssr: false });
 
@@ -222,6 +224,7 @@ export default function Home() {
       </Fab>
       <DrawerPage />
       <MapPage />
+      <MusicListPage />
       <ReactPlayer
         url={currentLive}
         className="youtube"
@@ -239,7 +242,12 @@ export default function Home() {
           position: 'fixed', bottom: '30px', right: '1%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
         onClick={handleClick}
       >
-        <ListIcon />
+        <lord-icon
+          src="https://cdn.lordicon.com/fgkmrslx.json"
+          trigger="loop-on-hover"
+          colors="primary:#ffffff,secondary:#ffffff"
+          state="hover">
+        </lord-icon>
       </Fab>
       <Menu
         id="basic-menu"

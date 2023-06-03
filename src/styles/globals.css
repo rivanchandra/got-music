@@ -12,6 +12,23 @@ body {
   font-family: 'Medieval'
 }
 
+.MuiTypography-body2 {
+  font-family: 'Medieval';
+  font-weight: 800;
+}
+
+.MuiTypography-body1 {
+  font-family: 'Medieval';
+}
+
+.Mui-checked {
+  color: #2b2b2b !important;
+}
+
+.MusicList {
+  height: 92vh !important;
+}
+
 @font-face {
   font-family: 'GameOfThrones';
   src: url('/Game of Thrones.ttf') format('truetype');
