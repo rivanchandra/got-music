@@ -4,6 +4,14 @@
   left: -1000px;
 }
 
+.MuiFab-circular:hover, .MuiFab-outlined:hover {
+  background-color: rgba(255,255,255,0.2) !important;
+}
+
+.MuiSlider-vertical {
+  color: rgba(255,255,255,0.5) !important;
+}
+
 .MuiTypography-h5 {
   color: #d3d3d3;
 }
