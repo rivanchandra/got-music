@@ -34,7 +34,6 @@ let musicList = list;
 let pictureList = pictures;
 
 export default function Home() {
-  
   const [videoUrl, setVideoUrl] = useState('/videos/1-day.mp4');
   const [livestream, playLiveStream] = useState(false);
   const [currentLive, setCurrentLive] = useState(musicList[count].url);
@@ -53,14 +52,36 @@ export default function Home() {
     };
   }, []);
 
+  useEffect(() => {
+    count = parseInt(localStorage.getItem('play')) || 0;
+    setCurrentLive(musicList[count].url);
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem('play', count)
+  },[currentLive]);
+
+  const jumpStart = (index) => {
+    count = index;
+    setCurrentLive(musicList[count].url);
+  }
+
   const start = () => {
     const start = livestream?false:true;
     playLiveStream(start);
   }
 
   const move = (cond) => {
-    cond == 'next'?count = count===musicList.length-1?0:count+1:count = count===0?musicList.length-1:count-1;
-    
+    if(cond == 'next')
+    {
+      count = count===musicList.length-1?0:count+1;
+    }
+    else
+    {
+      count = count===0?musicList.length-1:count-1;
+    }
+    //cond == 'next'?count = count===musicList.length-1?0:count+1:count = count===0?musicList.length-1:count-1;
+    console.log('count', count);
     setCurrentLive(musicList[count].url);
   }
 
@@ -224,7 +245,10 @@ export default function Home() {
       </Fab>
       <DrawerPage />
       <MapPage />
-      <MusicListPage />
+      <MusicListPage 
+        jumpStart={jumpStart}
+        count={count}
+      />
       <ReactPlayer
         url={currentLive}
         className="youtube"

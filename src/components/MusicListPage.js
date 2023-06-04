@@ -12,39 +12,48 @@ import Checkbox from '@mui/material/Checkbox';
 
 import { list } from '@/resources/list.js';
 
-export default function MusicListPage() {
+export default function MusicListPage(props) {
   const [drawer, setDrawer] = useState(false);
+  const [musicList, setMusicList] = useState(list);
   // const [checked, setChecked] = useState([0]);
 
-  // const handleToggle = (value) => () => {
-  //   const currentIndex = checked.indexOf(value);
-  //   const newChecked = [...checked];
+  const [currentCount, setCurrentCount] = useState(props.count);
 
-  //   if (currentIndex === -1) {
-  //     newChecked.push(value);
-  //   } else {
-  //     newChecked.splice(currentIndex, 1);
-  //   }
+  const handleToggle = (index) => () => {
+    // const currentIndex = checked.indexOf(value);
+    // const newChecked = [...checked];
 
-  //   setChecked(newChecked);
-  // };
+    // if (currentIndex === -1) {
+    //   newChecked.push(value);
+    // } else {
+    //   newChecked.splice(currentIndex, 1);
+    // }
+    musicList[index].play = musicList[index].play?false:true;
+
+    setMusicList(musicList);
+  };
+
+  const handleJumpStart = (index) => {
+    props.jumpStart(index);
+    setCurrentCount(index);
+  };
 
   function renderRow(props) {
     const { index, style } = props;
   
     return (
       <ListItem style={style} key={index} component="div" 
-        secondaryAction={
-          <Checkbox
-            edge="end"
-            // onChange={handleToggle(value.id)}
-            // checked={checked.indexOf(value.id) !== -1}
-            // inputProps={{ 'aria-labelledby': labelId }}
-          />
-        }
+        // secondaryAction={
+        //   <Checkbox
+        //     edge="end"
+        //     onChange={handleToggle(index)}
+        //     checked={musicList[index].play}
+        //   />
+        // }
       disablePadding>
-        <ListItemButton>
-          <ListItemText primary={list[index].name} />
+        <ListItemButton onClick={() => handleJumpStart(index)}>
+          <ListItemText primary={musicList[index].name} />
+          {/* {currentCount==index?"play":""} */}
         </ListItemButton>
       </ListItem>
     );
