@@ -17,16 +17,16 @@
 }
 
 body {
-  font-family: 'Medieval'
+  font-family: 'Medieval' !important;
 }
 
 .MuiTypography-body2 {
-  font-family: 'Medieval';
+  font-family: 'Medieval' !important;
   font-weight: 800;
 }
 
 .MuiTypography-body1 {
-  font-family: 'Medieval';
+  font-family: 'Medieval' !important;
 }
 
 .Mui-checked {
@@ -51,6 +51,6 @@ body {
   background-color: hsla(0,0%,100%,0) !important;
   background: url("https://static.vecteezy.com/system/resources/previews/012/981/812/original/old-parchment-paper-sheet-vintage-aged-or-texture-background-png.png");
   background-position: left center;
-  box-shadow: none;
+  box-shadow: none !important;
   padding-left: 5vw;
 }
