@@ -20,6 +20,7 @@ import FullscreenExitIcon from '@mui/icons-material/FullscreenExit';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import Tooltip from '@mui/material/Tooltip';
 
 import {list} from '../resources/list.js';
 import {pictures} from '../resources/pictures.js';
@@ -159,58 +160,66 @@ export default function Home() {
       >
         {count} {musicList[count].name}
       </Typography>
-      <Fab
-        variant="outlined" 
-        sx={{ 
-          borderRadius: '60px',
-          color: '#ffffff',
-          border: 'solid #ffffff 2px',
-          backgroundColor: 'rgba(0,0,0,0)',
-          position: 'fixed', 
-          bottom: '30px', 
-          left: '3%', 
-          transform: 'translateX(-50%)' 
-        }} color="primary" aria-label="add" size="small"
-        onClick={()=> move('prev')}
-      >
-        <FastRewindIcon />
-      </Fab>
-      <Fab 
-        sx={{ 
-          borderRadius: '60px',
-          color: '#ffffff',
-          border: 'solid #ffffff 2px',
-          backgroundColor: 'rgba(0,0,0,0)',
-          position: 'fixed', bottom: '30px', left: '7%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" 
-        onClick={start}
-      >
-        {livestream?
+      <Tooltip title="Prev" placement="top" arrow>
+        <Fab
+          variant="outlined" 
+          sx={{ 
+            borderRadius: '60px',
+            color: '#ffffff',
+            border: 'solid #ffffff 2px',
+            backgroundColor: 'rgba(0,0,0,0)',
+            position: 'fixed', 
+            bottom: '30px', 
+            left: '3%', 
+            transform: 'translateX(-50%)' 
+          }} color="primary" aria-label="add" size="small"
+          onClick={()=> move('prev')}
+        >
+          <FastRewindIcon />
+        </Fab>
+      </Tooltip>
+
+      <Tooltip title={livestream?"Stop":"Pause"} placement="top" arrow>
+        <Fab 
+          sx={{ 
+            borderRadius: '60px',
+            color: '#ffffff',
+            border: 'solid #ffffff 2px',
+            backgroundColor: 'rgba(0,0,0,0)',
+            position: 'fixed', bottom: '30px', left: '7%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" 
+          onClick={start}
+        >
+          {livestream?
+            <lord-icon
+              src="https://cdn.lordicon.com/ensnyqet.json"
+              trigger="loop-on-hover"
+              colors="primary:#ffffff"
+              state="hover">
+            </lord-icon>
+          :
           <lord-icon
-            src="https://cdn.lordicon.com/ensnyqet.json"
+            src="https://cdn.lordicon.com/xddtsyvc.json"
             trigger="loop-on-hover"
             colors="primary:#ffffff"
             state="hover">
           </lord-icon>
-        :
-        <lord-icon
-          src="https://cdn.lordicon.com/xddtsyvc.json"
-          trigger="loop-on-hover"
-          colors="primary:#ffffff"
-          state="hover">
-        </lord-icon>
-        }
-      </Fab>
-      <Fab 
-        sx={{ 
-          borderRadius: '60px',
-          color: '#ffffff',
-          border: 'solid #ffffff 2px',
-          backgroundColor: 'rgba(0,0,0,0)',
-          position: 'fixed', bottom: '30px', left: '11%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
-        onClick={()=> move('next')}
-      >
-        <FastForwardIcon />
-      </Fab>
+          }
+        </Fab>
+      </Tooltip>
+
+      <Tooltip title="Next" placement="top" arrow>
+        <Fab 
+          sx={{ 
+            borderRadius: '60px',
+            color: '#ffffff',
+            border: 'solid #ffffff 2px',
+            backgroundColor: 'rgba(0,0,0,0)',
+            position: 'fixed', bottom: '30px', left: '11%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
+          onClick={()=> move('next')}
+        >
+          <FastForwardIcon />
+        </Fab>
+      </Tooltip>
       <Slider 
         sx={{ height:100, position: 'fixed', bottom: '30px', left: '14%', transform: 'translateX(-50%)' }}
         orientation="vertical"
@@ -221,34 +230,46 @@ export default function Home() {
         step={0.01}
         onChange={handleChange} 
       />
-      <Fab 
-        sx={{ 
-          borderRadius: '60px',
-          color: '#ffffff',
-          border: 'solid #ffffff 2px',
-          backgroundColor: 'rgba(0,0,0,0)',
-          position: 'fixed', bottom: '30px', left: '17%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
-        onClick={() => suffleMusic()}
-      >
-        <ShuffleIcon />
-      </Fab>
-      <Fab 
-        sx={{ 
-          borderRadius: '60px',
-          color: '#ffffff',
-          border: 'solid #ffffff 2px',
-          backgroundColor: 'rgba(0,0,0,0)',
-          position: 'fixed', bottom: '30px', left: '20%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
-        onClick={() => handleClickFullscreen()}
-      >
-        {fullscreenIcon?<FullscreenIcon />:<FullscreenExitIcon />}
-      </Fab>
-      <DrawerPage />
-      <MapPage />
-      <MusicListPage 
-        jumpStart={jumpStart}
-        count={count}
-      />
+      
+      <Tooltip title="Shuffle" placement="top" arrow>
+        <Fab 
+          sx={{ 
+            borderRadius: '60px',
+            color: '#ffffff',
+            border: 'solid #ffffff 2px',
+            backgroundColor: 'rgba(0,0,0,0)',
+            position: 'fixed', bottom: '30px', left: '17%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
+          onClick={() => suffleMusic()}
+        >
+          <ShuffleIcon />
+        </Fab>
+      </Tooltip>
+
+      <Tooltip title="Fullscreen" placement="top" arrow>
+        <Fab 
+          sx={{ 
+            borderRadius: '60px',
+            color: '#ffffff',
+            border: 'solid #ffffff 2px',
+            backgroundColor: 'rgba(0,0,0,0)',
+            position: 'fixed', bottom: '30px', left: '20%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
+          onClick={() => handleClickFullscreen()}
+        >
+          {fullscreenIcon?<FullscreenIcon />:<FullscreenExitIcon />}
+        </Fab>
+      </Tooltip>
+      <Tooltip title="Story" placement="top" arrow>
+        <DrawerPage />
+      </Tooltip>
+      <Tooltip title="Map" placement="top" arrow>
+        <MapPage />
+      </Tooltip>
+      <Tooltip title="Music List" placement="top" arrow>
+        <MusicListPage 
+          jumpStart={jumpStart}
+          count={count}
+        />
+      </Tooltip>
       <ReactPlayer
         url={currentLive}
         className="youtube"
@@ -256,23 +277,26 @@ export default function Home() {
         volume={volume}
         onEnded={()=> move('next')}
       />
-      <Fab
-        variant="outlined" 
-        sx={{ 
-          borderRadius: '60px',
-          color: '#ffffff',
-          border: 'solid #ffffff 2px',
-          backgroundColor: 'rgba(0,0,0,0)',
-          position: 'fixed', bottom: '30px', right: '1%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
-        onClick={handleClick}
-      >
-        <lord-icon
-          src="https://cdn.lordicon.com/fgkmrslx.json"
-          trigger="loop-on-hover"
-          colors="primary:#ffffff,secondary:#ffffff"
-          state="hover">
-        </lord-icon>
-      </Fab>
+
+      <Tooltip title="Background" placement="top" arrow>
+        <Fab
+          variant="outlined" 
+          sx={{ 
+            borderRadius: '60px',
+            color: '#ffffff',
+            border: 'solid #ffffff 2px',
+            backgroundColor: 'rgba(0,0,0,0)',
+            position: 'fixed', bottom: '30px', right: '1%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
+          onClick={handleClick}
+        >
+          <lord-icon
+            src="https://cdn.lordicon.com/fgkmrslx.json"
+            trigger="loop-on-hover"
+            colors="primary:#ffffff,secondary:#ffffff"
+            state="hover">
+          </lord-icon>
+        </Fab>
+      </Tooltip>
       <Menu
         id="basic-menu"
         anchorEl={anchorEl}
@@ -303,18 +327,22 @@ export default function Home() {
           <PaymentsIcon />
         </Fab>
       </a> */}
+
+      
       <a href="https://github.com/rivanchandra" target="_blank">
-        <Fab
-          variant="outlined" 
-          sx={{ 
-            borderRadius: '60px',
-            color: '#ffffff',
-            border: 'solid #ffffff 2px',
-            backgroundColor: 'rgba(0,0,0,0)',
-            position: 'fixed', bottom: '30px', right: '4%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
-        >
-          <GitHubIcon />
-        </Fab>
+        <Tooltip title="Author" placement="top" arrow>
+          <Fab
+            variant="outlined" 
+            sx={{ 
+              borderRadius: '60px',
+              color: '#ffffff',
+              border: 'solid #ffffff 2px',
+              backgroundColor: 'rgba(0,0,0,0)',
+              position: 'fixed', bottom: '30px', right: '4%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
+          >
+            <GitHubIcon />
+          </Fab>
+        </Tooltip>
       </a>
     </>
   )
