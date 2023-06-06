@@ -56,6 +56,9 @@ export default function Home() {
   useEffect(() => {
     count = parseInt(localStorage.getItem('play')) || 0;
     setCurrentLive(musicList[count].url);
+    
+    let defaultBg = localStorage.getItem('bg') || pictureList[0].path;
+    setCurrentPicture(defaultBg);
   }, [])
 
   useEffect(() => {
@@ -123,6 +126,7 @@ export default function Home() {
 
   const changeBg = (data) => {
     setCurrentPicture(data);
+    localStorage.setItem('bg', data)
   }
 
 

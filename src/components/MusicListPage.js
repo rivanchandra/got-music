@@ -10,6 +10,8 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Checkbox from '@mui/material/Checkbox';
 
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+
 import { list } from '@/resources/list.js';
 
 export default function MusicListPage(props) {
@@ -38,6 +40,11 @@ export default function MusicListPage(props) {
     setCurrentCount(index);
   };
 
+  const openDrawer = (data) => {
+    setDrawer(data);
+    setCurrentCount(localStorage.getItem('play'));
+  }
+
   function renderRow(props) {
     const { index, style } = props;
   
@@ -46,14 +53,14 @@ export default function MusicListPage(props) {
         // secondaryAction={
         //   <Checkbox
         //     edge="end"
-        //     onChange={handleToggle(index)}
+            // onChange={handleToggle(index)}
         //     checked={musicList[index].play}
         //   />
         // }
       disablePadding>
         <ListItemButton onClick={() => handleJumpStart(index)}>
           <ListItemText primary={musicList[index].name} />
-          {/* {currentCount==index?"play":""} */}
+          {currentCount==index?<PlayArrowIcon id="play" />:""}
         </ListItemButton>
       </ListItem>
     );
@@ -68,7 +75,7 @@ export default function MusicListPage(props) {
           border: 'solid #ffffff 2px',
           backgroundColor: 'rgba(0,0,0,0)',
           position: 'fixed', bottom: '30px', left: '29%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
-          onClick={()=>setDrawer(true)}
+          onClick={()=>openDrawer(true)}
       >
         <lord-icon
           src="https://cdn.lordicon.com/jvucoldz.json"
@@ -80,7 +87,7 @@ export default function MusicListPage(props) {
       <Drawer
         anchor="right"
         open={drawer}
-        onClose={()=>setDrawer(false)}
+        onClose={()=>openDrawer(false)}
       >
         <Box component="span" sx={{ p: 2 }}>
           <FixedSizeList
