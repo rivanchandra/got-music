@@ -95,7 +95,7 @@ export default function MusicListPage(props) {
             height={1000}
             width={360}
             itemSize={46}
-            itemCount={223}
+            itemCount={222}
             overscanCount={5}
           >
             {renderRow}

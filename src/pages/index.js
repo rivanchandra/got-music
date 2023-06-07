@@ -183,7 +183,7 @@ export default function Home() {
         </Fab>
       </Tooltip>
 
-      <Tooltip title={livestream?"Stop":"Pause"} placement="top" arrow>
+      <Tooltip title={livestream?"Pause":"Play"} placement="top" arrow>
         <Fab 
           sx={{ 
             borderRadius: '60px',
@@ -262,18 +262,12 @@ export default function Home() {
           {fullscreenIcon?<FullscreenIcon />:<FullscreenExitIcon />}
         </Fab>
       </Tooltip>
-      <Tooltip title="Story" placement="top" arrow>
-        <DrawerPage />
-      </Tooltip>
-      <Tooltip title="Map" placement="top" arrow>
-        <MapPage />
-      </Tooltip>
-      <Tooltip title="Music List" placement="top" arrow>
-        <MusicListPage 
-          jumpStart={jumpStart}
-          count={count}
-        />
-      </Tooltip>
+      <DrawerPage />
+      <MapPage />
+      <MusicListPage 
+        jumpStart={jumpStart}
+        count={count}
+      />
       <ReactPlayer
         url={currentLive}
         className="youtube"
@@ -310,11 +304,9 @@ export default function Home() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        {pictureList.map((pic) => {
+        {pictureList.map((pic, index) => {
           return (
-            <>
-              <MenuItem onClick={()=> changeBg(pic.path)}>{pic.name}</MenuItem>
-            </>
+            <MenuItem key={`bg-${index}`} onClick={()=> changeBg(pic.path)}>{pic.name}</MenuItem>
           )
         })}
       </Menu>
