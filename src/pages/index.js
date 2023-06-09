@@ -27,6 +27,7 @@ import {pictures} from '../resources/pictures.js';
 import DrawerPage from '../components/DrawerPage.js';
 import MapPage from '../components/MapPage.js';
 import MusicListPage from '@/components/MusicListPage.js';
+import CopyRightPage from '@/components/CopyRightPage.js';
 
 const ReactPlayer = dynamic(() => import("react-player/youtube"), { ssr: false });
 
@@ -275,7 +276,7 @@ export default function Home() {
         volume={volume}
         onEnded={()=> move('next')}
       />
-
+      <CopyRightPage />
       <Tooltip title="Background" placement="top" arrow>
         <Fab
           variant="outlined" 
