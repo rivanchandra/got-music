@@ -48,7 +48,7 @@ export default function CopyRightPage() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleClose}>Profile2</MenuItem>
+        <MenuItem onClick={handleClose}>Profile3</MenuItem>
         <MenuItem onClick={handleClose}>My account</MenuItem>
         <MenuItem onClick={handleClose}>Logout</MenuItem>
       </Menu>
