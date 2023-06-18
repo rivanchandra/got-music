@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title>GOT Music</title>
+        <title>Game of Thrones Music</title>
       </Head>
       <body>
         <Main />
