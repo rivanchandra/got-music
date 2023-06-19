@@ -110,7 +110,7 @@ export default function DrawerPage() {
             <TabPanel value="1">
               <SeasonDisplay />
             </TabPanel>
-            <TabPanel value="2">Comming Soon</TabPanel>
+            <TabPanel value="2">Coming Soon</TabPanel>
           </TabContext>
         </Box>
       </Drawer>
