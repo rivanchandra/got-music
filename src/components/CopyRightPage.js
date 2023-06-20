@@ -49,7 +49,7 @@ export default function CopyRightPage() {
         {({ TransitionProps }) => (
           <Fade {...TransitionProps} timeout={350}>
             <Paper>
-              <Typography sx={{ p: 2 }}>All of the music list is come from official youtube and this website is only for fun. Enjoy!</Typography>
+              <Typography sx={{ p: 2 }}>All of the music list is come from official youtube and this website provided by a fan. Enjoy!</Typography>
             </Paper>
           </Fade>
         )}
