@@ -13,6 +13,8 @@ import Paper from '@mui/material/Paper';
 
 import Tooltip from '@mui/material/Tooltip';
 
+import Chip from '@mui/material/Chip';
+
 export default function CopyRightPage() {
   const [anchorEl, setAnchorEl] = useState(null);
   const [open, setOpen] = useState(false);
@@ -49,7 +51,7 @@ export default function CopyRightPage() {
         {({ TransitionProps }) => (
           <Fade {...TransitionProps} timeout={350}>
             <Paper>
-              <Typography sx={{ p: 2 }}>All of the music list is come from official youtube and this website provided by a fan.</Typography>
+              <Typography sx={{ p: 2 }}>All of the music list is come from <Chip label="WaterTowerWB" component="a" href="https://www.youtube.com/@WaterTowerWB" clickable /> <Chip label="Ramin Djawadi" component="a" href="https://www.youtube.com/channel/UCvV2r2DeuALi2RprU-J53EA" clickable /> and this website provided by a fan.</Typography>
             </Paper>
           </Fade>
         )}
