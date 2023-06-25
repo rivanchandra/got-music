@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import dynamic from 'next/dynamic';
 import Fab from '@mui/material/Fab';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
@@ -42,6 +42,24 @@ export default function Home() {
   const [currentPicture, setCurrentPicture] = useState(pictureList[0].path);
   const [volume, setVolume] = useState(100);
   const [fullscreenIcon, setFullscreenIcon] = useState(true);
+  const [seekValue, setSeekValue] = useState(0);
+  const [progressValue, setProgressValue] = useState(
+    {
+    url: null,
+    pip: false,
+    playing: true,
+    controls: false,
+    light: false,
+    volume: 0.8,
+    muted: false,
+    played: 0,
+    loaded: 0,
+    duration: 0,
+    playbackRate: 1.0,
+    loop: false
+  })
+
+  const playerRef = useRef();
 
   useEffect(() => {
     const script = document.createElement('script');
@@ -70,6 +88,22 @@ export default function Home() {
     count = index;
     setCurrentLive(musicList[count].url);
   }
+  
+  const handleInputChange = (event) => {
+    setSeekValue(event.target.value === '' ? '' : Number(event.target.value));
+  };
+  
+  const handleSeekMouseUp = e => {
+    console.log('qwewqe',seekValue);
+    // this.player.seekTo(parseFloat(e.target.value))
+    playerRef.current?.seekTo(parseFloat(seekValue));
+    // setProgressValue(prevState => ({
+    //   ...prevState,
+    //   played: parseFloat(e.target.value)
+    // }));
+    // setProgressValue({...progressValue, played:parseFloat(e.target.value)})
+    // this.player.seekTo(parseFloat(e.target.value))
+  }
 
   const start = () => {
     const start = livestream?false:true;
@@ -86,7 +120,6 @@ export default function Home() {
       count = count===0?musicList.length-1:count-1;
     }
     //cond == 'next'?count = count===musicList.length-1?0:count+1:count = count===0?musicList.length-1:count-1;
-    console.log('count', count);
     setCurrentLive(musicList[count].url);
   }
 
@@ -275,6 +308,19 @@ export default function Home() {
         playing={livestream}
         volume={volume}
         onEnded={()=> move('next')}
+        onProgress={setProgressValue}
+      />
+      <Slider
+        size="small"
+        min={0} 
+        max={0.999999}
+        step={0.01}
+        value={progressValue.played}
+        // value={seekValue}
+        valueLabelDisplay="off"
+        // onChange={handleInputChange}
+        // onMouseUp={handleSeekMouseUp}
+        sx={{ position: 'fixed', bottom: '3px', left: '0%', transform: 'translateX(0%)' }}
       />
       <CopyRightPage />
       <Tooltip title="Background" placement="top" arrow>
