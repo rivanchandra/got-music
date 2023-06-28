@@ -310,7 +310,7 @@ export default function Home() {
         onEnded={()=> move('next')}
         onProgress={setProgressValue}
       />
-      <Slider
+      {/* <Slider
         size="small"
         min={0} 
         max={0.999999}
@@ -321,7 +321,7 @@ export default function Home() {
         // onChange={handleInputChange}
         // onMouseUp={handleSeekMouseUp}
         sx={{ position: 'fixed', bottom: '3px', left: '0%', transform: 'translateX(0%)' }}
-      />
+      /> */}
       <CopyRightPage />
       <Tooltip title="Background" placement="top" arrow>
         <Fab
