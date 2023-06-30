@@ -308,7 +308,7 @@ export default function Home() {
         playing={livestream}
         volume={volume}
         onEnded={()=> move('next')}
-        onProgress={setProgressValue}
+        // onProgress={setProgressValue}
       />
       {/* <Slider
         size="small"
