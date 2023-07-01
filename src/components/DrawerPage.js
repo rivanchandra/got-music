@@ -10,6 +10,13 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 
+import ListItemText from '@mui/material/ListItemText';
+import List from '@mui/material/List';
+import ListItemButton from '@mui/material/ListItemButton';
+import Divider from '@mui/material/Divider';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import Avatar from '@mui/material/Avatar';
+
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -23,40 +30,37 @@ import { gotStory } from '../resources/story.js';
 export default function DrawerPage() {
   const [drawer, setDrawer] = useState(false);
   const [value, setValue] = useState('1');
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
-  const SeasonDisplay = () => {
+  const handleListItemClick = (event, index) => {
+		setSelectedIndex(index);
+	};
+
+  const SeasonDisplayLeft = () => {
     return gotStory.seasons.map((season, index)=> {
       const startIndex = 2;
       const newStories = season.stories.slice(startIndex);
 
       return(
-        <Accordion key={index}>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography variant="p">Season {index+1}</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
+        <>
+          {index === selectedIndex?
             <Grid container spacing={2}>
               <Grid item xs={8}>
-                <iframe width="560" height="315" src={season.trailer} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="500" height="315" src={season.trailer} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </Grid>
               <Grid item xs={4}>
                 <Typography variant="p">
                   {season.stories[0]}
                 </Typography>
-                <br/><br/>
+              </Grid>
+              <Grid item xs={12}>
                 <Typography variant="p">
                   {season.stories[1]}
                 </Typography>
-              </Grid>
-              <Grid item xs={12}>
                 {newStories.map((story) => {
                   return(
                     <>
@@ -67,14 +71,90 @@ export default function DrawerPage() {
                     </>
                   );
                 })}
-                <iframe width="560" height="315" src={season.bts} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="500" height="315" src={season.bts} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </Grid>
             </Grid>
-          </AccordionDetails>
-        </Accordion>
+          :''}
+        </>
       )
     })
   }
+
+  const SeasonDisplayRight = () => {
+    return gotStory.seasons.map((season, index)=> {
+      return(
+        <List
+          sx={{
+            position: 'relative',
+            overflow: 'auto',
+            maxHeight: '90vh',
+            padding:'0'
+          }}
+          component="nav" 
+          key={`right${index}`}
+        >
+          <ListItemButton
+            key={`list-${index}`}
+            selected={selectedIndex === index}
+            onClick={(event) => handleListItemClick(event, index)}
+          >
+            <ListItemText primary={`Season ${index+1}`} />
+          </ListItemButton>
+          <Divider component="li" />
+        </List>
+      );
+    })
+  }
+
+  // const SeasonDisplay = () => {
+  //   return gotStory.seasons.map((season, index)=> {
+  //     const startIndex = 2;
+  //     const newStories = season.stories.slice(startIndex);
+
+  //     return(
+  //       <>
+  //         <Accordion key={index}>
+  //           <AccordionSummary
+  //             expandIcon={<ExpandMoreIcon />}
+  //             aria-controls="panel1a-content"
+  //             id="panel1a-header"
+  //           >
+  //             <Typography variant="p">Season {index+1}</Typography>
+  //           </AccordionSummary>
+  //           <AccordionDetails>
+  //             <Grid container spacing={2}>
+  //               <Grid item xs={8}>
+  //                 <iframe width="560" height="315" src={season.trailer} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  //               </Grid>
+  //               <Grid item xs={4}>
+  //                 <Typography variant="p">
+  //                   {season.stories[0]}
+  //                 </Typography>
+  //                 <br/><br/>
+  //                 <Typography variant="p">
+  //                   {season.stories[1]}
+  //                 </Typography>
+  //               </Grid>
+  //               <Grid item xs={12}>
+  //                 {newStories.map((story) => {
+  //                   return(
+  //                     <>
+  //                       <Typography variant="p">
+  //                         {story}
+  //                       </Typography>
+  //                       <br/><br/>
+  //                     </>
+  //                   );
+  //                 })}
+  //                 <iframe width="560" height="315" src={season.bts} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  //               </Grid>
+  //             </Grid>
+  //           </AccordionDetails>
+  //         </Accordion>
+  //       </>
+  //     )
+  //   })
+  // }
 
   return(
     <>
@@ -108,7 +188,15 @@ export default function DrawerPage() {
               </TabList>
             </Box>
             <TabPanel value="1">
-              <SeasonDisplay />
+              {/* <SeasonDisplay /> */}
+              <Grid container spacing={2}>
+                <Grid item xs={10}>
+                  <SeasonDisplayLeft />
+                </Grid>
+                <Grid item xs={2}>
+                  <SeasonDisplayRight />
+                </Grid>
+              </Grid>
             </TabPanel>
             <TabPanel value="2">Coming Soon</TabPanel>
           </TabContext>
