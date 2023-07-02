@@ -209,7 +209,10 @@ export default function Home() {
             position: 'fixed', 
             bottom: '30px', 
             left: '3%', 
-            transform: 'translateX(-50%)' 
+            transform: 'translateX(-50%)',
+            '@media (max-width: 1024px)': {
+              left: '10vw'
+            }
           }} color="primary" aria-label="add" size="small"
           onClick={()=> move('prev')}
         >
@@ -224,7 +227,10 @@ export default function Home() {
             color: '#ffffff',
             border: 'solid #ffffff 2px',
             backgroundColor: 'rgba(0,0,0,0)',
-            position: 'fixed', bottom: '30px', left: '7%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" 
+            position: 'fixed', bottom: '30px', left: '7%', transform: 'translateX(-50%)',
+            '@media (max-width: 1024px)': {
+              left: '30vw'
+            } }} color="primary" aria-label="add" 
           onClick={start}
         >
           {livestream?
@@ -252,14 +258,20 @@ export default function Home() {
             color: '#ffffff',
             border: 'solid #ffffff 2px',
             backgroundColor: 'rgba(0,0,0,0)',
-            position: 'fixed', bottom: '30px', left: '11%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
+            position: 'fixed', bottom: '30px', left: '11%', transform: 'translateX(-50%)',
+            '@media (max-width: 1024px)': {
+              left: '50vw'
+            } }} color="primary" aria-label="add" size="small"
           onClick={()=> move('next')}
         >
           <FastForwardIcon />
         </Fab>
       </Tooltip>
       <Slider 
-        sx={{ height:100, position: 'fixed', bottom: '30px', left: '14%', transform: 'translateX(-50%)' }}
+        sx={{ height:100, position: 'fixed', bottom: '30px', left: '14%', transform: 'translateX(-50%)',
+        '@media (max-width: 1024px)': {
+          left: '70vw'
+        } }}
         orientation="vertical"
         aria-label="Volume" 
         value={volume}
@@ -276,7 +288,13 @@ export default function Home() {
             color: '#ffffff',
             border: 'solid #ffffff 2px',
             backgroundColor: 'rgba(0,0,0,0)',
-            position: 'fixed', bottom: '30px', left: '17%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
+            position: 'fixed', bottom: '30px', left: '17%', transform: 'translateX(-50%)',
+            '@media (max-width: 1024px)': {
+                display:'none'
+              }
+            }} 
+            
+            color="primary" aria-label="add" size="small"
           onClick={() => suffleMusic()}
         >
           <ShuffleIcon />
@@ -290,7 +308,12 @@ export default function Home() {
             color: '#ffffff',
             border: 'solid #ffffff 2px',
             backgroundColor: 'rgba(0,0,0,0)',
-            position: 'fixed', bottom: '30px', left: '20%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
+            position: 'fixed', bottom: '30px', left: '20%', transform: 'translateX(-50%)',
+            '@media (max-width: 1024px)': {
+              display:'none'
+            }
+          }} 
+          color="primary" aria-label="add" size="small"
           onClick={() => handleClickFullscreen()}
         >
           {fullscreenIcon?<FullscreenIcon />:<FullscreenExitIcon />}
@@ -331,7 +354,10 @@ export default function Home() {
             color: '#ffffff',
             border: 'solid #ffffff 2px',
             backgroundColor: 'rgba(0,0,0,0)',
-            position: 'fixed', bottom: '30px', right: '1%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
+            position: 'fixed', bottom: '30px', right: '1%', transform: 'translateX(-50%)',
+            '@media (max-width: 1024px)': {
+              right: '1vw'
+            } }} color="primary" aria-label="add" size="small"
           onClick={handleClick}
         >
           <lord-icon
@@ -381,7 +407,10 @@ export default function Home() {
               color: '#ffffff',
               border: 'solid #ffffff 2px',
               backgroundColor: 'rgba(0,0,0,0)',
-              position: 'fixed', bottom: '30px', right: '4%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
+              position: 'fixed', bottom: '30px', right: '4%', transform: 'translateX(-50%)',
+              '@media (max-width: 1024px)': {
+                display: 'none'
+              } }} color="primary" aria-label="add" size="small"
           >
             <GitHubIcon />
           </Fab>

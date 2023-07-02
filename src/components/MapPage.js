@@ -95,7 +95,10 @@ export default function MapPage() {
           color: '#ffffff',
           border: 'solid #ffffff 2px',
           backgroundColor: 'rgba(0,0,0,0)',
-					position: 'fixed', bottom: '30px', left: '26%', transform: 'translateX(-50%)' }} color="primary" aria-label="add" size="small"
+					position: 'fixed', bottom: '30px', left: '26%', transform: 'translateX(-50%)',
+					'@media (max-width: 1024px)': {
+						display:'none'
+					} }} color="primary" aria-label="add" size="small"
 				onClick={() => setDrawer(true)}
 			>
 				
