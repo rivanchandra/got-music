@@ -10,6 +10,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import Divider from '@mui/material/Divider';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
+import Image from 'next/image';
 
 import Map, 
 {	Marker,
@@ -50,7 +51,7 @@ export default function MapPage() {
 					// If we let the click event propagates to the map, it will immediately close the popup
 					// with `closeOnClick: true`
 					e.originalEvent.stopPropagation();
-					setPopupInfo(data);
+					setPopupInfo({name:journey[selected].name, index: index+1, ...data});
 				}}
 			>
 				<Pin number={index+1} bgColor={journey[selected].bgcolor} txColor={journey[selected].txcolor} />
@@ -144,7 +145,15 @@ export default function MapPage() {
 												onClose={() => setPopupInfo(null)}
 											>
 												<div>
-														{popupInfo.desc}
+													<Image
+														src={`/images/journey/${popupInfo.name}/${popupInfo.index}.jpg`}
+														alt="Journey"
+														width={0}
+														height={0}
+														sizes="100vw"
+														style={{ width: '100%', height: 'auto' }}
+													/>
+													{popupInfo.desc}
 												</div>
 											</Popup>
 										)}
