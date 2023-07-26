@@ -54,7 +54,7 @@ export default function CopyRightPage() {
         {({ TransitionProps }) => (
           <Fade {...TransitionProps} timeout={350}>
             <Paper>
-              <Typography sx={{ p: 2 }}>All of the music list is from <Chip label="WaterTowerWB" component="a" href="https://www.youtube.com/@WaterTowerWB" clickable /> <Chip label="Ramin Djawadi" component="a" href="https://www.youtube.com/channel/UCvV2r2DeuALi2RprU-J53EA" clickable /> and this website made by a fan. Enjoy!</Typography>
+              <Typography sx={{ p: 2 }}>Resource of the music is from <Chip label="WaterTowerWB" component="a" href="https://www.youtube.com/@WaterTowerWB" clickable /> <Chip label="Ramin Djawadi" component="a" href="https://www.youtube.com/channel/UCvV2r2DeuALi2RprU-J53EA" clickable /> and this website made by a fan. Enjoy!</Typography>
             </Paper>
           </Fade>
         )}
